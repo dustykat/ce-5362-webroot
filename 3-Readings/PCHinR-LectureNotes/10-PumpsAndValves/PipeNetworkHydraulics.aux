@@ -1,0 +1,97 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {8}Pipelines and Networks}{95}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Pipe Networks -- Topology}{95}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.1}Continunity (at a node)}{95}}
+\@writefile{lof}{\contentsline {figure}{\numberline {54}{\ignorespaces Continuity of mass (discharge) across a change in cross section\relax }}{95}}
+\newlabel{fig:continuity-across-sections}{{54}{95}}
+\@writefile{lof}{\contentsline {figure}{\numberline {55}{\ignorespaces Continuity of mass (discharge) across a node (junction)\relax }}{96}}
+\newlabel{fig:continuity-at-node}{{55}{96}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.2}Energy Loss (along a link)}{96}}
+\newlabel{eqn:closed-conduit-energy-equation}{{69}{96}}
+\@writefile{lof}{\contentsline {figure}{\numberline {56}{\ignorespaces Definition sketch for energy equation\relax }}{97}}
+\newlabel{fig:closed-conduit-energy}{{56}{97}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.3}Velocity Head}{97}}
+\newlabel{eqn:kinetic-energy-correction}{{70}{97}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.4}Added Head --- Pumps}{97}}
+\newlabel{eqn:pump-power}{{71}{97}}
+\citation{chin2006}
+\citation{chin2006}
+\newlabel{eqn:pump-curve}{{72}{98}}
+\newlabel{eqn:pump-curve-2}{{73}{98}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.5}Extracted Head --- Turbines}{98}}
+\newlabel{eqn:turbine-power}{{74}{98}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Pipe Head Loss Models}{98}}
+\newlabel{eqn:dw-headloss}{{75}{98}}
+\newlabel{eqn:friction-factor-dimensionless}{{76}{98}}
+\newlabel{eqn:friction-factor-laminar}{{77}{98}}
+\citation{chin2006}
+\citation{chin2006}
+\citation{chin2006}
+\newlabel{eqn:friction-factor-smooth}{{78}{99}}
+\newlabel{eqn:friction-factor-rough}{{79}{99}}
+\newlabel{eqn:friction-factor-CW}{{80}{99}}
+\newlabel{eqn:friction-factor-Jain}{{81}{99}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Illustrative Example}{99}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.1}Check geometry}{99}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.2}Prepare $f,K,Re$ Tables}{99}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.3}Write the mass balance for each node and head loss for each loop}{100}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Finding a Solution to the Network Equations}{101}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Newton-Raphson Method Theory}{101}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Pipe Networks -- Computing Flow Distributions}{103}}
+\newlabel{lst:PipeNetwork1}{{16}{103}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {16}R code demonstrating a Pipeline Network Simulator \\ This fragment of code reads the data file and converts the lines (read as text) into numeric values for subsequent processing}{103}}
+\newlabel{lst:PipeNetwork2}{{17}{105}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {17}R code demonstrating a Pipeline Network Simulator \\ This fragment of code contains the functions for computing head losses}{105}}
+\newlabel{lst:PipeNetwork3}{{18}{105}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {18}R code demonstrating a Pipeline Network Simulator \\ This fragment of code contains the computations that are used to build the coefficients in the \textbf  {Ax=B} system}{105}}
+\citation{Haman1971}
+\citation{Haman1971}
+\newlabel{lst:PipeNetwork4}{{19}{106}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {19}R code demonstrating a Pipeline Network Simulator \\ This fragment of code contains the computations that are used to build the Jacobian matrix}{106}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7}Pipe Networks Solution Methods}{106}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.8}Network Analysis}{107}}
+\@writefile{lof}{\contentsline {figure}{\numberline {57}{\ignorespaces Pipe network for illustrative example with supply and demands identified. Pipe dimensions and diameters are also depicted.\relax }}{107}}
+\newlabel{fig:pipe-net-hybrid}{{57}{107}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.9}Script Structure}{109}}
+\@writefile{lof}{\contentsline {figure}{\numberline {58}{\ignorespaces Input file for the problem\relax }}{109}}
+\newlabel{fig:inputFile}{{58}{109}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.9.1}Support Functions}{110}}
+\newlabel{lst:HydraulicSupport}{{20}{110}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {20}R Code to compute Reynolds numbers and friction factors \\}{110}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.9.2}Augmented and Jacobian Matrices}{111}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.9.3}Stopping Criteria, and Solution Report}{112}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.10}Exercises}{113}}
+\@writefile{lof}{\contentsline {figure}{\numberline {59}{\ignorespaces Layout of Simple Network\relax }}{113}}
+\newlabel{fig:NetworkLayout}{{59}{113}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Node and Pipe Data\relax }}{113}}
+\newlabel{tab:PipeData}{{1}{113}}
+\@writefile{lof}{\contentsline {figure}{\numberline {60}{\ignorespaces Pipe network for illustrative example with supply and demands identified. Pipe lengths (in feet) and diameters (in feet) are also depicted.\relax }}{114}}
+\newlabel{fig:pipe-net}{{60}{114}}
+\@writefile{lof}{\contentsline {figure}{\numberline {61}{\ignorespaces Pipe network for illustrative example with pipes and nodes labeled.\relax }}{114}}
+\newlabel{fig:pipe-net-loops}{{61}{114}}
+\@setckpt{./8-PipeNetworkHydraulics/PipeNetworkHydraulics}{
+\setcounter{page}{116}
+\setcounter{equation}{99}
+\setcounter{enumi}{4}
+\setcounter{enumii}{3}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{28}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{section}{8}
+\setcounter{subsection}{10}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{61}
+\setcounter{table}{1}
+\setcounter{NAT@ctr}{0}
+\setcounter{parentequation}{0}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{AM@survey}{0}
+\setcounter{lstnumber}{29}
+\setcounter{ContinuedFloat}{0}
+\setcounter{lstlisting}{20}
+}

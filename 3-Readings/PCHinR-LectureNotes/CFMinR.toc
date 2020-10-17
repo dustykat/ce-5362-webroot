@@ -1,0 +1,174 @@
+\contentsline {section}{\numberline {1}Introduction and Getting Started}{7}
+\contentsline {subsection}{\numberline {1.1}About \textbf {R}}{7}
+\contentsline {subsection}{\numberline {1.2}Getting Started}{8}
+\contentsline {subsubsection}{\numberline {1.2.1}Windows Users}{8}
+\contentsline {subsubsection}{\numberline {1.2.2}Macintosh OSX Users}{16}
+\contentsline {subsubsection}{\numberline {1.2.3}Linux Users}{22}
+\contentsline {section}{\numberline {2}Algorithms and \textbf {R} for Computing}{30}
+\contentsline {subsection}{\numberline {2.1}Tools}{30}
+\contentsline {subsection}{\numberline {2.2}Programming}{31}
+\contentsline {subsection}{\numberline {2.3}Interpolating Tabular Data -- A useful algorithm}{31}
+\contentsline {subsection}{\numberline {2.4}Linear Interpolation}{31}
+\contentsline {subsubsection}{\numberline {2.4.1}Interpolation of Values in Two Pairs}{33}
+\contentsline {subsubsection}{\numberline {2.4.2}Interpolation of Values in Two Arrays}{34}
+\contentsline {subsection}{\numberline {2.5}Sorting}{37}
+\contentsline {subsubsection}{\numberline {2.5.1}Bubble Sort}{37}
+\contentsline {subsubsection}{\numberline {2.5.2}Insertion Sort}{42}
+\contentsline {subsubsection}{\numberline {2.5.3}Merge Sort}{44}
+\contentsline {subsubsection}{\numberline {2.5.4}Built-In \textbf {R} Sorts}{44}
+\contentsline {section}{\numberline {3}Numerical Methods -- Integrals, Derivatives, and Newton's Method}{48}
+\contentsline {subsection}{\numberline {3.1}Numerical Integration of Functions}{48}
+\contentsline {subsubsection}{\numberline {3.1.1}Rectangular Panels}{49}
+\contentsline {subsubsection}{\numberline {3.1.2}Trapezoidal Panels}{51}
+\contentsline {subsubsection}{\numberline {3.1.3}Parabolic Panels}{54}
+\contentsline {subsection}{\numberline {3.2}Exercise Set 2}{57}
+\contentsline {subsection}{\numberline {3.3}Numerical Integration of Tabular Data}{58}
+\contentsline {subsubsection}{\numberline {3.3.1}Reading from a file -- open, read, close files}{58}
+\contentsline {subsection}{\numberline {3.4}Integrating tabular data}{59}
+\contentsline {subsection}{\numberline {3.5}Numerical Differentiation}{63}
+\contentsline {subsection}{\numberline {3.6}Difference Approximations for Tabulated Data}{63}
+\contentsline {subsubsection}{\numberline {3.6.1}Slope of a Secant Line}{64}
+\contentsline {subsubsection}{\numberline {3.6.2}Disaggregation}{65}
+\contentsline {subsubsection}{\numberline {3.6.3}Numerical Differentiation}{66}
+\contentsline {subsubsection}{\numberline {3.6.4}Aggregation}{68}
+\contentsline {subsection}{\numberline {3.7}Exercises}{68}
+\contentsline {subsection}{\numberline {3.8}Finite-Difference Formulas}{69}
+\contentsline {subsubsection}{\numberline {3.8.1}First Derivatives}{69}
+\contentsline {subsubsection}{\numberline {3.8.2}Second Derivatives}{69}
+\contentsline {subsubsection}{\numberline {3.8.3}Third Derivatives}{70}
+\contentsline {subsection}{\numberline {3.9}Single Variable Quasi-Newton Methods}{71}
+\contentsline {subsubsection}{\numberline {3.9.1}Newton's Method --- Using analytical derivatives}{72}
+\contentsline {subsubsection}{\numberline {3.9.2}Newton's Method --- Using Finite-Differences to estimate derivatives}{75}
+\contentsline {subsubsection}{\numberline {3.9.3}Method Fails}{78}
+\contentsline {subsubsection}{\numberline {3.9.4}Multiple Roots}{79}
+\contentsline {subsubsection}{\numberline {3.9.5}Cycling}{79}
+\contentsline {subsubsection}{\numberline {3.9.6}Near-zero derivatives}{80}
+\contentsline {subsection}{\numberline {3.10}Related Concepts}{80}
+\contentsline {subsection}{\numberline {3.11}Exercise Set 3}{81}
+\contentsline {section}{\numberline {4}Tank Drain Simulation using Finite-Differences}{82}
+\contentsline {subsection}{\numberline {4.1}Problem Description}{82}
+\contentsline {subsection}{\numberline {4.2}Computational Approach}{83}
+\contentsline {subsection}{\numberline {4.3}Problem Analysis --- Development of the Analytical Solution}{83}
+\contentsline {subsubsection}{\numberline {4.3.1}Application of Analytical Solution in \textbf {R}}{85}
+\contentsline {subsection}{\numberline {4.4}Problem Analysis --- Development of the Finite-Difference Approximation}{85}
+\contentsline {subsection}{\numberline {4.5}Application of the Finite-Difference Approximation in \textbf {R}}{86}
+\contentsline {subsection}{\numberline {4.6}Exercise Set 4}{88}
+\contentsline {section}{\numberline {5}Simultaneous Linear Systems of Equations}{90}
+\contentsline {subsection}{\numberline {5.1}Numerical Linear Algebra -- Matrix Manipulation}{91}
+\contentsline {subsection}{\numberline {5.2}The Matrix --- A data structure}{91}
+\contentsline {subsection}{\numberline {5.3}Matrix Arithmetic}{92}
+\contentsline {subsubsection}{\numberline {5.3.1}Matrix Definition}{93}
+\contentsline {subsubsection}{\numberline {5.3.2}Multiply a matrix by a scalar}{93}
+\contentsline {subsubsection}{\numberline {5.3.3}Matrix addition (and subtraction)}{95}
+\contentsline {subsubsection}{\numberline {5.3.4}Multiply a matrix}{97}
+\contentsline {subsubsection}{\numberline {5.3.5}Identity matrix}{98}
+\contentsline {subsubsection}{\numberline {5.3.6}Matrix Inverse}{100}
+\contentsline {subsubsection}{\numberline {5.3.7}Gauss-Jordan method of finding $\mathbf {A}^{-1}$}{100}
+\contentsline {subsection}{\numberline {5.4}Jacobi Iteration -- An iterative method to find solutions}{105}
+\contentsline {section}{\numberline {6}Simultaneous Non-Linear Systems of Equations}{108}
+\contentsline {section}{\numberline {7}Numerical Methods -- Multiple Variable Quasi-Newton Method}{114}
+\contentsline {section}{\numberline {8}Pipelines and Networks}{119}
+\contentsline {subsection}{\numberline {8.1}Pipe Networks -- Topology}{119}
+\contentsline {subsubsection}{\numberline {8.1.1}Continunity (at a node)}{119}
+\contentsline {subsubsection}{\numberline {8.1.2}Energy Loss (along a link)}{120}
+\contentsline {subsubsection}{\numberline {8.1.3}Velocity Head}{121}
+\contentsline {subsubsection}{\numberline {8.1.4}Added Head --- Pumps}{121}
+\contentsline {subsubsection}{\numberline {8.1.5}Extracted Head --- Turbines}{122}
+\contentsline {subsection}{\numberline {8.2}Pipe Head Loss Models}{122}
+\contentsline {subsection}{\numberline {8.3}Pipe Networks Solution Methods}{123}
+\contentsline {subsection}{\numberline {8.4}Network Analysis}{123}
+\contentsline {section}{\numberline {9}Pipelines Network Analysis}{127}
+\contentsline {subsection}{\numberline {9.1}Script Structure}{127}
+\contentsline {subsubsection}{\numberline {9.1.1}Support Functions}{128}
+\contentsline {subsubsection}{\numberline {9.1.2}Augmented and Jacobian Matrices}{129}
+\contentsline {subsubsection}{\numberline {9.1.3}Stopping Criteria, and Solution Report}{130}
+\contentsline {subsection}{\numberline {9.2}Exercises}{135}
+\contentsline {section}{\numberline {10}Pumps and Valves}{138}
+\contentsline {subsection}{\numberline {10.1}Energy Loss (along a link)}{138}
+\contentsline {subsubsection}{\numberline {10.1.1}Added Head --- Pumps}{138}
+\contentsline {subsubsection}{\numberline {10.1.2}Fitting (Minor) Losses}{143}
+\contentsline {subsubsection}{\numberline {10.1.3}Extracted Head --- Turbines}{144}
+\contentsline {section}{\numberline {11}Pipeline Transients --- Water Hammer}{145}
+\contentsline {subsection}{\numberline {11.1}Analysis}{145}
+\contentsline {subsection}{\numberline {11.2}Explicit Finite-Difference Model}{146}
+\contentsline {subsection}{\numberline {11.3}An Example \textbf {R} Implementation}{148}
+\contentsline {section}{\numberline {12}Open Channel Flow}{152}
+\contentsline {subsection}{\numberline {12.1}St. Venant Equations}{152}
+\contentsline {subsubsection}{\numberline {12.1.1}The Computational Cell}{152}
+\contentsline {subsubsection}{\numberline {12.1.2}Assumptions}{153}
+\contentsline {subsubsection}{\numberline {12.1.3}Conservation of Mass}{154}
+\contentsline {subsubsection}{\numberline {12.1.4}Conservation of Momentum}{155}
+\contentsline {section}{\numberline {13}Steady Water Surface Profiles}{162}
+\contentsline {subsection}{\numberline {13.1}Steady Uniform Flow}{162}
+\contentsline {subsection}{\numberline {13.2}Steady Gradually Varied Flow}{162}
+\contentsline {subsubsection}{\numberline {13.2.1}Finite Difference Methods --- Fixed Depth Change Step Method}{162}
+\contentsline {subsubsection}{\numberline {13.2.2}Coding the algorithm in \textbf {R}}{163}
+\contentsline {subsubsection}{\numberline {13.2.3}Example 1 --- Backwater curve}{165}
+\contentsline {subsubsection}{\numberline {13.2.4}Example 2 --- Front-water curve}{167}
+\contentsline {subsubsection}{\numberline {13.2.5}Finite Difference Methods --- Fixed Space Change Method}{169}
+\contentsline {subsection}{\numberline {13.3}Exercise Set 10}{171}
+\contentsline {section}{\numberline {14}Finite-Difference Method for Unsteady Open Channel Flow}{173}
+\contentsline {subsection}{\numberline {14.1}Governing Difference Equations -- Lax Scheme}{173}
+\contentsline {subsubsection}{\numberline {14.1.1}Continunity}{173}
+\contentsline {subsubsection}{\numberline {14.1.2}Momentum}{173}
+\contentsline {subsection}{\numberline {14.2}Mapping from the Physical to Computational Domain}{174}
+\contentsline {subsection}{\numberline {14.3}Building the Difference Equations}{176}
+\contentsline {subsubsection}{\numberline {14.3.1}Time Differences}{176}
+\contentsline {subsubsection}{\numberline {14.3.2}Space Differences}{176}
+\contentsline {subsubsection}{\numberline {14.3.3}Continunity}{177}
+\contentsline {subsubsection}{\numberline {14.3.4}Momentum}{178}
+\contentsline {subsubsection}{\numberline {14.3.5}Example 1 -- Steady flow in a rectangular channel}{178}
+\contentsline {subsubsection}{\numberline {14.3.6}Example 2 -- Routing a storm hydrograph}{184}
+\contentsline {subsubsection}{\numberline {14.3.7}Example 3 -- Sudden gate closing in an aqueduct channel}{184}
+\contentsline {subsubsection}{\numberline {14.3.8}Example 4 -- Long waves in a tidal-influenced channel}{184}
+\contentsline {subsection}{\numberline {14.4}Quasi-2D Methods}{184}
+\contentsline {subsection}{\numberline {14.5}Exercises}{184}
+\contentsline {section}{\numberline {15}Using Method of Characteristics for Boundary Conditions}{185}
+\contentsline {section}{\numberline {16}Flow in Porous Materials}{186}
+\contentsline {subsection}{\numberline {16.1}Storage}{187}
+\contentsline {subsection}{\numberline {16.2}Permeability}{187}
+\contentsline {subsection}{\numberline {16.3}Head Loss Models}{187}
+\contentsline {subsection}{\numberline {16.4}Confined Aquifer Flow}{189}
+\contentsline {subsection}{\numberline {16.5}Unconfined Aquifer Flow}{192}
+\contentsline {section}{\numberline {17}Steady Groundwater Flow}{194}
+\contentsline {subsection}{\numberline {17.1}Confined Aquifer Flow}{194}
+\contentsline {subsubsection}{\numberline {17.1.1}Finite-Difference Methods -- 1 Spatial Dimension}{194}
+\contentsline {subsubsection}{\numberline {17.1.2}Finite-Difference Methods -- 2 Spatial Dimensions}{202}
+\contentsline {subsubsection}{\numberline {17.1.3}Generalizing the Boundary Conditions}{213}
+\contentsline {subsubsection}{\numberline {17.1.4}Internal sources/sinks to handle a discharge (well) at a specific location}{221}
+\contentsline {subsection}{\numberline {17.2}Unconfined Aquifer Flow}{227}
+\contentsline {subsubsection}{\numberline {17.2.1}Finite-Difference Methods}{227}
+\contentsline {subsection}{\numberline {17.3}Exercises}{234}
+\contentsline {section}{\numberline {18}Unsteady Groundwater Flow}{236}
+\contentsline {subsection}{\numberline {18.1}Confined Aquifers}{236}
+\contentsline {subsubsection}{\numberline {18.1.1}Finite-Difference Methods -- 1 Spatial Dimension}{236}
+\contentsline {subsubsection}{\numberline {18.1.2}Explicit Formulation}{237}
+\contentsline {subsubsection}{\numberline {18.1.3}Implicit Formulation}{237}
+\contentsline {subsection}{\numberline {18.2}Finite-Difference Methods -- 2 Spatial Dimensions}{237}
+\contentsline {subsection}{\numberline {18.3}Unconfined Aquifers}{245}
+\contentsline {subsubsection}{\numberline {18.3.1}Explicit Formulation}{246}
+\contentsline {subsubsection}{\numberline {18.3.2}Implicit Formulation}{247}
+\contentsline {subsection}{\numberline {18.4}Exercises}{257}
+\contentsline {section}{\numberline {19}Flow Nets}{260}
+\contentsline {subsection}{\numberline {19.1}Unconfined Aquifer Flow}{273}
+\contentsline {subsubsection}{\numberline {19.1.1}Finite-Difference Methods}{273}
+\contentsline {subsection}{\numberline {19.2}Exercises}{273}
+\contentsline {section}{\numberline {20}Heat and Mass Transport}{274}
+\contentsline {subsection}{\numberline {20.1}Concentration}{274}
+\contentsline {subsection}{\numberline {20.2}Tracer Hypothesis}{274}
+\contentsline {subsection}{\numberline {20.3}Advection (Convection) Process}{274}
+\contentsline {subsection}{\numberline {20.4}Diffusion Process}{274}
+\contentsline {subsection}{\numberline {20.5}Dispersion Process}{274}
+\contentsline {subsection}{\numberline {20.6}Reaction Processes}{274}
+\contentsline {subsubsection}{\numberline {20.6.1}Linear Equilibrum Isotherms and Concept of Retardation}{274}
+\contentsline {subsection}{\numberline {20.7}Advection, Dispersion, Retardation, Decay Mathematics}{274}
+\contentsline {section}{\numberline {21}Analytical Solutions to ADR Equations}{275}
+\contentsline {subsection}{\numberline {21.1}Impulse Solution}{275}
+\contentsline {subsection}{\numberline {21.2}Ogata-Banks Solution}{275}
+\contentsline {subsection}{\numberline {21.3}2D-Injection (Hunt) Solution}{275}
+\contentsline {subsection}{\numberline {21.4}2D-, and 3D- Domenico Robbins Solutions}{275}
+\contentsline {section}{\numberline {22}Numerical Solutions to ADR Equations}{276}
+\contentsline {subsection}{\numberline {22.1}Explicit Methods}{276}
+\contentsline {subsubsection}{\numberline {22.1.1}Centered Differences}{276}
+\contentsline {subsubsection}{\numberline {22.1.2}Upwind Formulation(s)}{276}
+\contentsline {subsection}{\numberline {22.2}Crank-Nicholson Methods}{276}
