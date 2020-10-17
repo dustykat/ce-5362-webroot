@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css" >
+    </head>
+    <body>
+        
+        <div class="topnav">
+            <a class="active" href="../../../">Server Home Page</a>
+            <a href="./0-Syllabus/ce-5362-swmodeling.syb.pdf">Syllabus</a>
+            <a href="./1-Lessons/">Lessons</a>
+            <a href="./2-Exercises/">Exercises</a>
+            <a href="./3-Readings/">Readings</a>
+            <a href="./4-Toolkit/">Toolkit</a>
+            <a href="http://theodore-odroid.ttu.edu/documents/toolbox/">Web Tools (On-line tools)</a>
+
+        </div>
+        
+        <div style="padding-left:16px">
+            <h2>CE 5362 Surface Water Modeling </h2>
+       Prerequesite:CE 5360 or instructor consent<br> 
+            Theory and application of hydrodynamic models.
+            Theory and application of watershed models.
+        </div>
+        
+        
+
+        <button class="accordion">Description</button>
+        <div class="panel">
+	<p>The course trains engineers to practice hydrologic and hydraulic modeling
+        in one-dimensional unsteady conditiond; and in higher sparial dimensions (2D/3D) using 
+        custom-written and professional software tools.
+        Integration of simulation tools to examine complex systems is emphasized.
+	<br/><br/>
+	The course provides an experience in different modeling platforms(DIY, HEC-RAS, SWMM, EFDC) 	
+	to answer hydrodynamic questions using non-trivial examples.<br/><br/>
+	Upon successful completion of this course, the participant will have:<br>
+        1. Review relevant theory for 1D dynamic wave routing. <br>
+	2. Develop and code a Lax-Diffusion method for time-varying flow in an
+           open channel and compared results with HEC-RAS unsteady and SWMM. 
+        <br>
+	3. Simulate the confluence of two streams in steady and unsteady conditions
+         (fabricated conditions) using HEC-RAS or SWMM (1D-spatial)
+        <br>
+	4. Simulate the confluence of White Oak and Buffalo Bayou in steady and unsteady conditions
+         using HEC-RAS or SWMM (1D-spatial)
+         <br>
+        5. Simulate a large-scale (county) drainage network <br> 
+	6. Examine theory for 2D estuary/floodplain modeling 
+        <br>
+        7. Develop a quasi-2D model using SWMM
+        8. Develop and code a diffusion approximation for 2D floodplain
+        <br>
+        9. Simulate selected examples using EFDC
+        <br>
+       &nbsp&nbsp&nbsp a). Simulate 2D steady in East Lab Flume (real flume)
+        <br>
+       &nbsp&nbsp&nbsp b). Simulate 2D steady White River
+        <br> 
+       &nbsp&nbsp&nbsp c). Simulate 2D unsteady "simple estuary" with river inflow
+        <br>
+       &nbsp&nbsp&nbsp d). Simulate 2D unsteady San Antonio Bay with salinity tracking 
+	</p>
+        </div>
+        
+        <button class="accordion">Pre-Requesites</button>
+        <div class="panel">
+        <p>CE 5360 Graduate students status 
+	 (exceptional undergraduates by instructor permission). 
+	Additionally students are expectied to have had courses equivalent to a university 
+	course in fluid mechanics, hydrology, environmental engineering (or science).  
+	Familarity with computer programming (MatLab, Python, Excel-VBA, R) will be 
+	useful.
+	</p>
+        </div>
+        
+        <button class="accordion">Software</button>
+        <div class="panel">
+            <p> Excel and <strong>R</strong> will be used extensively.  </p>
+<p> Simulation models will use HEC-RAS, SWMM, and EFDC (or other 2D/3D code)</p>
+</p>
+        </div>
+<!-- JavaScripts for this page -->
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        }
+    }
+</script>
+
+    </body>
+</html>
