@@ -1,0 +1,198 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{daves,fancyhdr,natbib,graphicx,dcolumn,amsmath,lastpage,url}
+\usepackage{amsmath,amssymb,epstopdf,longtable}
+\usepackage{paralist} 
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\pagestyle{fancy}
+\lhead{CE 5362 -- Surface Water Modeling}
+\rhead{SPRING 2021}
+\lfoot{REVISION NO. 1}
+\cfoot{}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\renewcommand\headrulewidth{0pt}
+
+
+
+\begin{document}
+\begin{center}
+\noindent {{ CE 5361 Surface Water Modeling} \\ {Course Syllabus} }
+\end{center}
+
+
+\section*{\small{Course Location, Textbook, Instructor Contact Information}}
+\begin{tabular}{p{1.5in}p{5.0in}}
+Class meetings: & T-TH Distance  \\
+Instructor: & Theodore G. Cleveland, TBD \\
+Teaching Assistant: & None \\
+Office Hours: & TBD \\
+Telephone: & (806)834-5101 \\
+E-mail: & \texttt{theodore.cleveland@ttu.edu}\\
+Web Content: & \url{http://54.243.252.9/ce-5362-psuedo-course/}\\
+Web LMS: & \url{blackyboard} \\
+Textbook : & Course notes and library resources.  Any hydraulics text with open channel flow component should suffice.\\
+Copyright : & \textsl{Copyright $\copyright$ 2009 Theodore G. Cleveland, all rights reserved.} \\
+\end{tabular}
+
+\section*{\small{Course Objectives}}
+The purpose of this class is to study the theory and application of hydrodynamic models, apply these models in watershed modeling of both water flow and constituent transport.
+
+The student will be able to 
+\begin{enumerate}
+\item Present relevant theory for 1D dynamic wave routing. 
+\item Develop and code a Lax-Diffusion method for time-varying flow in an open channel and compare results with HEC-RAS unsteady or SWMM. 
+\item Simulate the confluence of two streams in steady and unsteady conditions using HEC-RAS or SWMM (1D-spatial)
+\item Present  relevant theory for 2D estuary/floodplain modeling 
+\item Develop a quasi-2D models to approximate 2D floodplain 
+\item Simulate selected 2-D examples using EFDC 	
+\end{enumerate}
+
+\section*{\small{ABET Program Outcomes Addressed in CE 5362}\footnote{Included for compatability with other courses in Civil and Envrionmental Engineering.}.}
+\begin{tabular}{p{0.5in}p{5.5in}}
+\texttt{3[a].}  & Ability to apply knowledge of mathematics, science, and engineering.\\
+%\texttt{3[b].}  & Ability to design and conduct experiments, as well as to analyze and interpret data.\\
+\texttt{3[e].}  & Ability to identify, formulate, and solve engineering problems.\\
+\texttt{3[i].}   & Recognition of need for life-long learning.\\
+\texttt{3[k].}  & Ability to use the techniques, skills, and modern engineering tools necessary for engineering practice.\\
+\texttt{8[d].}  & Proficiency in water resources engineering.\\
+\end{tabular}
+
+\section*{\small{Course Schedule}}
+\begin{tabular}{p{0.25in}p{5.8in}p{0.2in}}
+Week & {~~~~~~~~~~~~~~~~~~Topics} & ~ \\
+\hline
+\hline
+1 &  Modeling philosophy, concept of an algorithm, 1D dynamic wave routing. & ~ \\
+2 &  Open conduit dynamic flow (St. Venant Equations) -- Simple Finite-Difference Schemes & ~\\
+3 &  Develop and code a Lax-Diffusion method for time-varying flow in an open channel& ~ \\
+3 &  Develop and code a Lax-Diffusion method for time-varying flow in an open channel& ~ \\
+5 &  Compare Lax-Diffusion model to HEC-RAS (or SWMM) & ~ \\
+6 &  Simulate the confluence of two streams in steady conditions using HEC-RAS (or SWMM) & ~ \\
+7 &  Simulate the confluence of two streams in unsteady conditions using HEC-RAS (or SWMM) & ~ \\
+8 & Relevant theory for 2D estuary/floodplain modeling& ~\\
+9 & Quasi-2D model using SWMM to approximate 2D floodplain  & ~\\
+10 & Review of available 2D models;Install EFDC (a grid-based model) without GUI  & \\
+11 & Simulate 2D steady in East Lab Flume (EFDC) or White River & \\
+12 & Simulate 2D unsteady "simple estuary" with river inflow  & ~\\
+13 & Simulate 2D  unsteady San Antonio Bay with salinity tracking & \\
+14 & Simulate 2D  unsteady San Antonio Bay with salinity tracking & ~\\
+15 & \textbf{Final Exam} (on-line via \url{http://atomickitty.ddns.net/moodle/})& \\
+%\begin{enumerate}
+%\item Review relevant theory for 1D dynamic wave routing. 
+%\item Develop and code a Lax-Diffusion method for time-varying flow in an open channel and compare results with HEC-RAS unsteady or SWMM. 
+%%\item Simulate the confluence of two streams in steady and unsteady conditions using HEC-RAS or SWMM (1D-spatial)
+%\item Simulate the confluence of White Oak and Buffalo Bayou in steady and unsteady conditions using HEC-RAS or SWMM (1D-spatial) 
+%\item Simulate a large-scale (county) drainage network 
+%\item Review relevant theory for 2D estuary/floodplain modeling 
+%\item Develop a quasi-2D model using SWMM to approximate 2D floodplain 
+%\item Simulate selected 2-D examples using EFDC 
+%	 \begin{enumerate}[a)]
+%	 	\item Simulate 2D steady in East Lab Flume (real flume) 
+%		\item Simulate 2D steady White River 
+%		\item Simulate 2D unsteady "simple estuary" with river inflow 
+%		\item Simulate 2D unsteady San Antonio Bay with salinity tracking
+%	\end{enumerate}	
+%\end{enumerate}
+\hline
+\end{tabular}
+
+%==========STANDARD COURSE POLICY MATERIALS, SHOULD NOT CHANGE OFTEN=======
+\textbf{Disability:}
+\textsl{ "Any student who, because of a disability, may require special arrangements in order to meet
+the course requirements should contact the instructor as soon as possible to make any necessary arrangements.
+Students should present appropriate verification from Student Disability Services during the instructors office hours. Please note instructors are not allowed to provide classroom accommodations
+to a student until appropriate verification from Student Disability Services has been provided.
+For additional information, you may contact the Student Disability Services ofice at 335 West Hall or
+806- 742-2405."}
+
+\textbf{Religious Holidays:}
+\textsl{ "A student who intends to observe a religious holy day (as defined by OP 34.19) should
+make that intention known to the instructor prior to the absence in order to receive accommodations
+prescribed by OP 34.19."}
+
+\textbf{Cellphones/Pagers: }
+Cellphones and pagers are common with both students and faculty. 
+Please set your personal communication devices to silent ring or off during class. 
+Do not take calls in class. 
+%Disturbance during class time may result in your being dropped from the class.
+
+\textbf{Prerequisites:} 
+Mastery of material from CE 5360 and CE 5361 or equivalent is expected.
+
+\textbf{Attendance:} If you come to class every day, you won't miss anything.  Please let the instructor know if you must miss a class for a legitimate reason\footnote{Legitimate reasons include: Academically-related extracurricular activities (ASCE, AGU, etc.); Illness with documentation; Federal Family Leave Act Policies; Orders to activate (Military, Peace Officer, Public Health, etc.).  Bring me some kind of documentation for such absences.}. 
+
+\textbf{Exams:} One examination will be given
+%The mid-term exam will worth 100 points. 
+The exam will appear as a quiz on the learning management system (LMS) \url{http://atomickitty.ddns.net/moodle/}
+%\begin{enumerate}
+%\item Examinations are open notes.
+%\item Examinations are comprehensive.
+%\item Full credit for problems will only be given if all computations are documented.
+%\item Requests for adjustment of examination grades will be accepted only if written and delivered to
+%me within one week from the date of return of the subject exam. Subsequent to that time, no
+%adjustments will be made except for a miscalculation of the score.
+%\end{enumerate}
+
+\textbf{Quizzes:} Six (6) quizzes will be given. The quizzes will be on the learning management system (LMS) \url{http://atomickitty.ddns.net/moodle/}%examination points. Quizzes cannot be made up. If you miss a quiz for legitimate reasons (generally
+%by informing me in advance that you will be absent from class), you will be given a missed-quiz score
+%equal to your average quiz score. Quizzes missed without a legitimate excuse will count zero.
+
+\textbf{Exercises:} 
+Five project assignments will be made during the semester they appear as assignments on the learning management system (LMS) \url{http://atomickitty.ddns.net/moodle/}.  
+Due dates are announced on the LMS.
+%\begin{enumerate}
+%\item Every homework assignment is to be accompanied by a descriptive report containing your analysis
+%of the problem. All report materials are to be prepared with a word processor. %Graphs should be
+%%prepared with a computer spreadsheet or an acceptable substitute.
+%%\item Article reviews will be prepared by each student, in the student's own words, with a word processor
+%%in the format presented in class.
+%\item All hand computations are to be turned in on engineering paper in the format prescribed
+%in class. All important steps in each solution must be shown for credit. %Computations
+%%using spreadsheets are acceptable, but documentation of computational procedures is required.
+%%Failure to provide complete documentation of computational procedures (either hand calculations
+%%or formulation and example calculations for spreadsheets) will result in zero credit for the
+%%assignment.
+%\item Assignments are due at the beginning of class. Without prior arrangement, late assignments will
+%not be accepted.
+%\end{enumerate}
+
+%\textbf{Article Reviews:} 
+%A number of article reviews will be assigned. 
+%It is an important part of professional development to read and interpret the journal literature. 
+%The journal literature, not textbooks, are where new developments appear first. 
+%Reading assignments and due dates are posted on the class website. 
+%A grade for the article reviews will not be assigned\footnote{Article reviews are graded in the sense that if not submitted they will result in a reduced course grade.}, but comments will be made and if they
+%are not written, a penalty will be assigned.
+
+\textbf{Cheating:} Cheating will not be tolerated.  The instructor will indicate when students can work as a team and when solely individual work is to be submitted.
+
+\textbf{Grading:} Final grades are determined based on performance during the semester.  Letter grades will be assigned using University standards.  The approximate weighting of graded material in determining the final grade is as follows\footnote{Graded materials with fewer than 100 points will have raw scores reported and will be normalized to 100 points for calculating the final grade.}:
+% Requires the booktabs if the memoir class is not being used
+\begin{table}[htbp]
+   \centering
+
+   \begin{tabular}{l l}
+Item & Percent of Grade \\
+\hline
+\hline
+%Article Reviews & 10\% \\
+Homework & 50\% \\
+Quizzes & 20\% \\
+Examination& 30\% \\
+\hline
+\end{tabular}
+
+\end{table}
+
+
+
+
+
+
+
+
+
+\end{document}  
