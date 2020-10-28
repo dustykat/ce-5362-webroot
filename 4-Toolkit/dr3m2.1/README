@@ -1,0 +1,304 @@
+README                                                   March 1, 1996
+
+                                DR3M
+
+           Distributed Routing Rainfall-Runoff Model--version II
+
+                    DR3M - Version 2.1  1996/03/01
+
+
+   dr3m2.1.DGUX.tar.gz   - Distribution prepared on a Data General
+                           AViiON under DG/UX 5.4
+   dr3m2.1.source.tar.gz - Distribution that includes the source code
+                           but no compiled software
+
+                          TABLE OF CONTENTS
+
+                          A. DESCRIPTION
+                          B. DOCUMENTATION
+                          C. EXTRACTING FILES
+                          D  COMPILING
+                          E. INSTALLING
+                          F. RUNNING THE PROGRAM
+                          G. TESTING
+                          H. CONTACTS
+
+
+A. DESCRIPTION
+
+A watershed model for routing storm runoff through a branched system
+of pipes and (or) natural channels using rainfall as input.  DR3M
+provides detailed simulation of storm-runoff periods selected by the
+user.  There is daily soil-moisture accounting between storms.  A
+drainage basin is represented as a set of overland-flow, channel,
+and reservoir segments, which jointly describe the drainage features
+of the basin.  This model is usually used to simulate small urban
+basins.  Interflow and base flow are not simulated.  Snow accumulation
+and snowmelt are not simulated.
+
+
+B. DOCUMENTATION
+
+Alley, W.M., and Smith, P.E., 1982, Distributed routing rainfall-
+   runoff model--version II:  U.S. Geological Survey Open-File
+   Report 82-344, 201 p.
+
+
+C. EXTRACTING FILES
+
+Compressed tar files are used to distribute pre-compiled versions of the
+software and the source code.  All of the files needed to install dr3m2.1
+are contained in the files dr3m2.1.______.tar.gz (where ______ is a string
+indicating the file contains either the source code or a pre-compiled
+version of the program for the indicated operating system).  The source
+version of the tar file contains the source code and all other files needed
+to compile and install the software on a UNIX-based computer.  For either
+type of distribution, the directory dr3m2.1 will be created (or overwritten)
+when the files are extracted from the tar tape.  If the dr3m2.1 directory
+already exists, you may want to delete or rename it before extracting the
+files.  For pre-compiled versions, the file lib3.0/lib_data/message.wdm is
+also included, this file is shared by a number of applications.  If you
+already have lib3.0 installed, do not delete or move it.  The following are
+the steps to extract the files from a distribution tar file.
+
+  Steps in extracting files                 explanation
+  ----------------------------------------  -----------------------------------
+  mv dr3m2.1.____.tar.gz /usr/opt/wrdapp    If the tar file is not already in
+                                            the directory where you want the
+                                            distribution installed, move it
+                                            there.
+
+  cd /usr/opt/wrdapp                        If you are not in the directory
+                                            where the tar file is located, go
+                                            there.
+
+  gunzip dr3m2.1.____.tar.gz                Uncompress the distribution file.
+
+  tar -xof dr3m2.1.____.tar                 Extract the distribution files
+                                            from the tar file.
+
+This creates the following directory structure (the contents of each
+directory are shown to the right):
+
+   dr3m2.1             copy of this README file
+     `-----bin         compiled executable
+     `-----doc         documentation files (see file Contents)
+     `-----src         Makefile (and, with source tar, the source code)
+     `-----test        scripts to run verification tests
+     `-----data        standard data sets used in verification tests
+   lib3.0
+     `-----lib_data    the message file message.wdm
+
+Notes:  a) The bin subdirectory is not included in the
+           dr3m2.1.source.tar.gz distribution, it is created during
+           compilation.
+        b) Source code is included only with the dr3m2.1.source.tar.gz
+           distribution.
+        c) It is recommended that no user files be kept in the dr3m2.1
+           directory structure.  If you plan to put files in the dr3m2.1
+           directory structure, do so only by creating subdirectories
+           under dr3m2.1.
+        d) The software is configured for installation under the
+           directory /usr/opt/wrdapp.  The wrdapp directory may be
+           a separate file system mounted at /usr/opt/wrdapp.  If
+           you choose to install the software elsewhere, you will need
+           to retrieve the source version of the tar file and compile
+           the software.
+        e) To compile a new version of the software, you will also need:
+           (1) libraries and other data files from the lib3.0 library
+           (lib3.0.______.tar.gz), and (2) ANSI-compliant Fortran 77
+           compiler.
+
+
+D. COMPILING
+
+If you have retrieved a pre-compiled distribution of the software, skip to
+the Installing section below.  If a compiled version of the software is not
+available for your computer, or if you want to build the executable yourself,
+follow the instructions in this section.
+
+The source code is provided in the dr3m2.1.source.tar.gz distribution so
+that users can generate the executable themselves.  Little or no support
+can be provided for users generating their own versions of the software.
+In general, the requirements are ANSI-compliant Fortran 77 and a minimum
+level of knowledge of the compiler and the UNIX operating system.  Libraries
+and data files from the lib3.0 distribution are also required.  As provided,
+the make file, source code, and text version of the message file are set up
+for use on Data General AViiON workstations running the DG/UX operating system.
+
+To generate a new executable and message file, do the following:
+
+1.  The values for the indicated variables in the following dr3m2.1 files
+    may need to be modified (see the file dr3m2.1/doc/versions.doc for
+    more details):
+
+                           may need to be modified
+                           -----------------------
+                            version     compiler
+    file name              variables  flags  name
+    ---------------------  ---------  -----------
+    src/Makefile           WrdA       FFLAGS  F77
+        fmessg.inc         WDNAME
+        pinout.inc         IOIN IOOT
+        xrecl.inc          RLNGTH
+    test/test.sh           WrdA
+
+2.  Run the Makefile program in the src directory to compile the source.
+    In the directory dr3m2.1/src, run the make:
+
+        cd dr3m2.1/src
+        make
+
+    The dr3m2.1/src/Makefile will:
+
+        a.  Create the directory dr3m2.1/bin if it does not already exist.
+
+        b.  Compile the source code and place the dr3m executable
+            in the directory dr3m2.1/bin.
+
+
+E. INSTALLING
+
+To make the dr3m program easy to use, it should be installed in a directory
+included in the user's search path.  The Makefile in dr3m2.1/src contains
+instructions to optionally place a link in a specified directory to the
+executable contained in dr3m2.1/bin.  Use the following commands to do this:
+
+    cd dr3m2.1/src
+    make install [BINDIR=bin_path]
+
+where bin_path is the name of a directory in the user's search path.  If
+BINDIR is specified, a link to the executable (dr3m2.1/bin/dr3m) is placed
+in the specified directory.  If BINDIR is not specified, no link is set and
+the full pathname of the executable is required to run the program.
+
+For example, if the search path is /usr/bin:/usr/opt/bin:/usr/local/bin, you
+can use the following command to install the program:
+
+    make install BINDIR=/usr/local/bin
+
+Notes:  a) Brackets "[xxx]" are used to indicate optional arguments
+           to commands.
+        b) To create and delete links to the dr3m executable, the installer
+           must have sufficient rights to the BINDIR directory.
+
+
+F. RUNNING THE PROGRAM
+
+After the dr3m executable is properly installed (see Installing, above) in a
+directory that is included in the user's PATH, the program can be executed
+with the command "dr3m".
+
+
+G. TESTING
+
+Test data sets are provided to verify that the program is correctly installed
+and running on the system.  The tests may also be looked at as examples of how
+to use the program.  The directory dr3m2.1/test contains the script to run
+the tests.  The directory dr3m2.1/data contains the input data and the
+expected results for each test.  Tests are usually run in the dr3m2.1/test
+directory, but they can be run in any user directory.  Type the following
+commands to test the program installation:
+
+     [path]/test.sh [start [stop]]
+
+where:  path  = path to the script
+                use "." if running the tests in the dr3m2.1/test directory
+                use full pathname if not running the test in dr3m2.1/test
+        start = the number of the first test to perform, default = 1
+        stop  = the number of the last test to perform, default = 5
+
+For example:
+
+     command                                 what happens
+     --------------------------------------  --------------------------------
+     ./test.sh                               runs all of the tests
+     ./test.sh 1 1                           runs the first test
+     ./test.sh 2 4                           runs tests 2, 3, and 4
+     /usr/opt/wrdapp/dr3m2.1/test/test.sh    runs all of the tests
+
+
+After the tests are completed, the results are compared to the expected
+results (found in dr3m2.1/data).  See the file check.out; if all goes
+well, the only differences will be due to different processing times.
+To clean up after the tests, type the command:
+
+     ./clean.sh
+
+Notes:  a) Some of the tests may require input generated by a previous test,
+           so they should be run in sequential order.
+           1) test 1 requires that the annie2.2 program be installed on the
+              system.
+           1) tests 2 - 5 require the wdm file created in test 1.
+        b) The standard data sets were created on a Data General AViiON
+           workstation.  You may notice slight numeric differences in the
+           results on other computers.  These are generally due to different
+           round-off algorithms and the different architecture of the central
+           processing unit chip.
+
+The tests are described in the table below, where 'test' is the  test number,
+'program' is the program used to run the test, and the 'usage' column indicates
+how a file is used, with i for input, o for output, and i/o for both input and
+output.
+
+
+test  program  description of test and files      file name & usage
+----  -------  ---------------------------------  -----------------
+  1   annie    create the wdm file, import one
+               file in the wdm export format
+
+               annie command file                 test1.log      i
+               data for Sand Creek                sand.xpt       i
+               data management file               sand.wdm       o
+
+  2   dr3m     optimization run, no routing
+
+               master file                        test2.mtr      i
+               model control file                 test2.inp      i
+               data management file               sand.wdm       i 
+               output/print file                  test2.out      o
+               summary of input time-series data  test2.dmp      o 
+
+  3   dr3m     storm routing simulation, flows 
+               saved to the wdm file 
+ 
+               master file                        test3.mtr      i
+               model control file                 test3.inp      i
+               data management file               sand.wdm      i/o
+               output/print file                  test3.out      o
+               summary of input time-series data  test3.dmp      o
+               pltgen file of peaks               test3.pks      o
+               pltgen file of hydrographs         test3.unt      o
+
+  4   dr3m     storm routing simulation, flows
+               saved to file in old format
+ 
+               master file                        test4.mtr      i
+               model control file                 test4.inp      i
+               data management file               sand.wdm       i
+               output/print file                  test4.out      o
+               summary of input time-series data  test4.dmp      o
+               pltgen file of peaks               test4.pks      o
+               pltgen file of hydrographs         test4.unt      o
+               segment flow file                  test4.sgs      o
+
+  5   dr3m     storm routing simulation, flows 
+               are not saved
+
+               master file                        test5.mtr      i
+               model control file                 test5.inp      i
+               data management file               sand.wdm       i
+               output/print file                  test5.out      o
+               summary of input time-series data  test5.dmp      o
+               pltgen file of peaks               test5.pks      o
+               pltgen file of hydrographs         test5.unt      o
+
+H. CONTACTS
+
+Inquiries about this software distribution should be directed to:
+
+  U.S. Geological Survey
+  Hydrologic Analysis Software Support Team
+  Kathleen M. Flynn                           e-mail:  h2osoft@usgs.gov
+  437 National Center                         phone:   703-648-5313
+  Reston, VA  22092                           fax:     703-648-5722

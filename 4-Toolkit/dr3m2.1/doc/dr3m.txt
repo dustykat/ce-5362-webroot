@@ -1,0 +1,198 @@
+
+
+
+     dr3m(1)          U.S. Geological Survey (wrdapp)          dr3m(1)
+
+
+     NAME
+            dr3m - Distributed Routing Rainfall-Runoff Model--version II
+
+     ABSTRACT
+            DR3M is a watershed model for routing storm runoff through a
+            Branched system of pipes and (or) natural channels using rainfall as
+            input.  DR3M provides detailed simulation of storm-runoff periods
+            selected by the user.  There is daily soil-moisture accounting
+            between storms.  A drainage basin is represented as a set of
+            overland-flow, channel, and reservoir segments, which jointly
+            describe the drainage features of the basin.  This model is usually
+            used to simulate small urban basins.  Interflow and base flow are
+            not simulated.  Snow accumulation and snowmelt are not simulated.
+
+     METHOD
+            The rainfall-excess components include soil-moisture accounting,
+            pervious-area rainfall excess, impervious-area rainfall excess, and
+            parameter optimization.  The Green-Ampt equation is used in the
+            calculations of infiltration and pervious area rainfall excess.  A
+            Rosenbrock optimization procedure may be used to aid in calibrating
+            several of the infiltration and soil-moisture accounting parameters.
+            Kinematic wave theory is used for both overland-flow and channel
+            routing.  There are three solution techniques available:  method of
+            characteristics, implicit finite difference method, and explicit
+            finite difference method.  Two soil types may be defined.  Overland
+            flow may be defined as turbulent or laminar.  Detention reservoirs
+            may be simulated as linear storage or using a modified-Puls method.
+            Channel segments may be defined as gutter, pipe, triangular cross
+            section, or by explicitly specifying the kinematic channel
+            parameters alpha and m.
+
+     HISTORY
+            1991 - DR3M-version II, added option to output simulated time-series
+               data to Watershed Data Management (WDM) file.  Output file
+               modified to reduce width from 132 characters to 80 characters or
+               less.
+
+            1984 - DR3M-version II, WDM file replaces "card" input of time-
+               series data.
+
+            1982 - DR3M-version II, added two solution techniques for kinematic
+               wave routing.  Added a file link to DR3M-QUAL.  Improved general
+               output.
+
+            1978 - Original DR3M version, incorporated the routing component
+               from a version of the Massachusetts Institute of Technology
+               catchment model into the lumped parameter rainfall-runoff model.
+
+            1972 - A lumped parameter rainfall-runoff model for small rural
+               watersheds
+
+     DATA REQUIREMENTS
+            Daily precipitation, daily evapotranspiration, and short-interval
+            precipitation are required.  Short-interval discharge is required
+
+
+
+                                01 May 1996                          1
+
+
+
+
+
+     dr3m(1)          U.S. Geological Survey (wrdapp)          dr3m(1)
+
+
+            for the optimization option and to calibrate the model.  These time
+            series are read from a WDM file.  Roughness and hydraulics
+            parameters and sub-catchment areas are required to define the basin.
+            Six parameters are required to calculate infiltration and soil-
+            moisture accounting.  Up to three rainfall stations may be used.
+            Two soil types may be defined.  A total of 99 flow planes, channels,
+            pipes, reservoirs, and junctions may be used to define the basin.
+
+     OUTPUT OPTIONS
+            The computed outflow from any flow plane, pipe, or channel segment
+            for each storm period may be written to the output file or to the
+            WDM file.  A summary of the measured and simulated rainfall, runoff,
+            and peak flows is written to the output file.  A flat file
+            containing the storm rainfall, measured flow (if available), and
+            simulated flow at user selected sites can be generated.  A flat file
+            for each storm containing the total rainfall, the measured peak flow
+            (if available), and the simulated peak flow for user-selected sites
+            can be generated.
+
+     SYSTEM REQUIREMENTS
+            UNIX-based computers (supported:  Data General AViiON and Sun
+            SPARCstation).
+
+            DOS-based computers having a math coprocessor and 2 mb of memory
+            (supported: IBM-compatible computers with a 386 or greater
+            processor).
+
+            DR3M is written in Fortran.  Generally, it is easily installed on
+            other platforms.
+
+     DOCUMENTATION
+            Alley, W.M., and Smith, P.E., 1982, Distributed routing rainfall-
+               runoff model--version II:  U.S. Geological Survey Open-File
+               Report 82-344, 201 p.
+
+     RELATED DOCUMENTATION
+            Flynn, K.M., Hummel, P.R., Lumb, A.M., Kittle, J.L., Jr., 1995,
+               User's manual for ANNIE, version 2, a computer program for
+               interactive hydrologic data management:  U.S. Geological Survey
+               Water-Resources Investigations 95-4085, 211 p.
+
+     REFERENCES
+            Dawdy, D.R., Lichty, R.W., and Bergmann, J.M., 1972, A rainfall-
+               runoff simulation model for estimation of flood peaks for small
+               drainage basins: U.S. Geological Survey Professional Paper 506-B,
+               28 p.
+
+            Dawdy, D.R., Schaake, J.C., Jr., and Alley, W.M., 1978, User's guide
+               for distributed routing rainfall-runoff model:  U.S. Geological
+               Survey Water-Resources Investigations Report 78-90, 146 p.
+
+            Doyle, H.W., Jr., and Miller, J.E., 1980, Calibration of a
+               distributed routing rainfall-runoff model at four urban sites
+               near Miami, Florida: U.S. Geological Survey Water-Resources
+
+
+
+                                01 May 1996                          2
+
+
+
+
+
+     dr3m(1)          U.S. Geological Survey (wrdapp)          dr3m(1)
+
+
+               Investigations Report 80-1, 87 p.
+
+            Guay, J.R., and Smith, P.E., 1988, Simulation of quantity and
+               quality of storm runoff for urban catchments in Fresno,
+               California:  U.S. Geological Survey Water-Resources
+               Investigations Report 88-4125, 76 p.
+
+            Leclerc, Guy, and Schaake, J.C., Jr., 1973, Methodology for
+               assessing the potential impact of urban development on urban
+               runoff and the relative efficiency of runoff control
+               alternatives:  Ralph M. Parsons Laboratory Report no. 167,
+               Massachusetts Institute of Technology, 257 p.
+
+     TRAINING
+            Watershed Systems Modeling I (G0083), offered annually at the USGS
+            National Training Center.
+
+            Watershed Systems Modeling II (G0183), offered upon request at the
+            USGS National Training Center.
+
+     CONTACTS
+            Operation and Distribution:
+               U.S. Geological Survey
+               Hydrologic Analysis Software Support Team
+               Kate Flynn
+               437 National Center
+               Reston, VA 22092
+
+               h2osoft@usgs.gov
+
+            Latest version by anonymous ftp from:
+                  h2o.usgs.gov
+                  /pub/software/surface_water/dr3m
+
+     SEE ALSO
+            annie - Program to list, table, plot data in a WDM file
+            dr3m-qual - Multi-event urban runoff quality model
+            iowdm - Program to store time-series data in a WDM file
+            wdm - Watershed Data Management system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                01 May 1996                          3
+
+

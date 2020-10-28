@@ -1,0 +1,5 @@
+C
+      COMMON /CPULS/ WV, S1, C1
+      REAL      WV(MXSG,MXDX), S1(MXSG,MXDX), C1(MXSG,MXDX)
+C
+      SAVE /CPULS/
