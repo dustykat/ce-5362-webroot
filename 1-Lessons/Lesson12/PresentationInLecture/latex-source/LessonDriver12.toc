@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}HEC-RAS Confluence (Junctions)}{2}
+\contentsline {subsection}{\numberline {1.1}Conceptualization}{2}
+\contentsline {subsubsection}{\numberline {1.1.1}Tributary does not directly contribute momentum to main branch }{2}
+\contentsline {subsubsection}{\numberline {1.1.2}Tribuitary directly contributes momentum to main branch}{2}
+\contentsline {subsection}{\numberline {1.2}Examples}{3}
+\contentsline {subsubsection}{\numberline {1.2.1}Example 1. -- using HEC-RAS Steady}{3}
+\contentsline {subsection}{\numberline {1.3}Appendix}{6}

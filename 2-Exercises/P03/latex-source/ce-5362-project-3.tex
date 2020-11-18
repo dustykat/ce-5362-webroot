@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{./styles/daves,fancyhdr,natbib,graphicx,dcolumn,amsmath,lastpage,url}
+\usepackage{amsmath,amssymb,epstopdf,longtable}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\pagestyle{fancy}
+\lhead{CE 5362 -- Surface WaterModeling}
+\rhead{SPRING 2020}
+\lfoot{}
+\cfoot{}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\renewcommand\headrulewidth{0pt}
+
+
+
+\begin{document}
+\begin{center}
+{\textbf{{ CE 5362 Surface Water Modeling} \\ {Project 3}}}
+\end{center}
+
+\section*{{Problem Statement}}
+Figure  \ref{fig:confluence} is a sketch of a channel and tributary system with a road (bridge) crossing the main channel.  The cross sections are surveyed and the sections are included in Figure \ref{fig:cross-sections-table}
+
+\begin{figure}[h!] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3.5in]{confluence.png} 
+   \caption{Plan view/schematic for example}
+   \label{fig:confluence}
+\end{figure}
+
+Cross section 1 is the most downstream section; sections 10 and 14 are upstream sections.  
+Roughness coefficients for the left-over-bank, channel, and right-over-bank are estimated as 0.10, 0.05, and 0.08 for the main channel portion of the system and 0.08, 0.05, and 0.08 for the tributary portion of the system.
+\clearpage
+Figure \ref{fig:cross-sections-table} is a screen capture of a data table that contains the location of the cross sections relative to the diagram (Section 1 is located at distance 0 from the outlet, Section 10 is located 1760 feet upstream of the outlet, etc.).  
+The numbers to the right of each section title in the table are the distances upstream from section 1 and should be used as the section names in HEC-RAS.   
+\begin{figure}[h!] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[height=5in]{cross-sections-table.png} 
+   \caption{Tabular cross sections }
+   \label{fig:cross-sections-table}
+\end{figure}
+Section 11 connects to the main channel between Section 6 and 7, and that is the meaning of the ``*'' symbol in the table.
+The angle that the tributary forms with the main channel is about 60-degrees.
+X-LB and Z-LB are distance and elevation relative to the left bank of each section. %--- Figure 2 is a plot of Section 3 for reference.
+
+The road is cut into the surrounding grade so that the low chord of the bridge at the main channel is at elevation 290, and the roadway surface is at elevation 295 feet.  
+\clearpage
+Figure \ref{fig:steady-flow-conditions} is a table of steady flow conditions to consider. 
+
+\begin{figure}[h!] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[height=5in]{steady-flow-conditions.png} 
+   \caption{Steady flow conditions - various combinations}
+   \label{fig:steady-flow-conditions}
+\end{figure}
+Determine if the current bridge low chord can accommodate the different flows. 
+If flow cannot clear the low chord, treat the bridge as a large culvert and determine if the roadway surface is still passable (not flooded).
+
+Repeat the analysis assuming the bridge abutments extend 100 feet into the left and right over-bank.
+\clearpage
+Figure \ref{fig:hydrographs-table} is a table of transient flow conditions to consider. 
+\begin{figure}[h!] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[height=5in]{hydrographs-table.png} 
+   \caption{Transient flow conditions }
+   \label{fig:hydrographs-table}
+\end{figure}
+\newline
+Determine if the current bridge low chord can accommodate the different flows.  
+
+
+If flow cannot clear the low chord, treat the bridge as a large culvert and determine if the roadway surface is still passable (not flooded).
+
+Repeat the analysis assuming the bridge abutments extend 100 feet into the left and right over-bank.
+
+Document in a brief report
+\begin{enumerate}
+
+\item How you chose to analyze the hydraulics (i.e. tool choices, assumptions, boundary conditions, etc.) --- and why you made your choices.
+\item Data preparation (i.e. how the hydrographs were digitized for analysis, etc.)
+\item Results of the three steady flow cases.
+\item Results of the transient (dynamic) flow case.
+\item Serviceability of the bridge with and without abutments.
+\item Speculation on the effect of the bridge on the channel system with and without abutments.
+
+\end{enumerate}
+
+
+%Save your results in addition to preparing the report -- you will rebuild all these models in \url{HEC-RAS} or \url{SWMM} to discover the similarity in results and have an understanding of what goes on under the hood in that professional program.
+\end{document}  

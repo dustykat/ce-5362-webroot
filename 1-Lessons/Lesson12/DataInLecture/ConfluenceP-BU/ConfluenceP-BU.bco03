@@ -1,0 +1,58 @@
+ 
+                                              HEC-RAS - River Analysis System
+ 
+ 
+Project File:  C:\Users\theodore\Documents\HEC Data\HEC-RAS\MyExamples\ConfluenceP\ConfluenceP-BU\ConfluenceP-BU.prj
+ 
+Project Name:  ConfluenceP-BU
+ 
+ 
+Plan Name:     Plan 03
+ 
+Short ID:      Plan 03
+ 
+
+Starting Time:   01Jan2020 0100
+
+Ending Time:     04Jan2020 0500
+
+
+                ################################################
+                #                                              #
+                #                                              #
+                #       1D and 2D Unsteady Flow Module         #
+                #                                              #
+                #                                              #
+                #          HEC-RAS 5.0.7 March 2019            #
+                #                                              #
+                #             11MAR20 at 10:54:56              #
+                #                                              #
+                ################################################
+ 
+ 
+ 
+
+
+
+                 Volume Accounting in Acre Feet
+
+                           External Boundary Flux of Water
+
+         US Inflow       Lat Hydro      DS Outflow        SA Hydro     Groundwater       2D Inflow      2D Outflow      Diversions
+         *********       *********      **********        ********     ***********       *********      **********      **********
+             3455.                           3327.                                                                                
+
+                      River Reaches, Storage Areas, and 2D Areas
+
+    Start 1D Reach   Starting SA's     Starting 2D  Final 1D Reach      Final SA's  Final 2D Areas
+    **************   *************     ***********  **************      **********  **************
+             3.040                                           15.66                                
+
+                             Error   Percent Error
+
+                             *****   *************
+                       -115.068711           3.328
+
+
+
+

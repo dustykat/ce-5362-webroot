@@ -1,0 +1,43 @@
+Flow Title=ConfluenceP-BU
+Program Version=5.07
+Use Restart= 0 
+Boundary Location=ConfluenceP     ,Upper           ,1760    ,        ,                ,                ,                ,                                
+Interval=1HOUR
+Flow Hydrograph= 100 
+     500     500     500     500     500     500     500     500     500     500
+     500     500     500     500     500     500     500     500     500     500
+     500     500     500     500     500     500     500     500     500     500
+     500     500     500     500     500     500     500     500     500     500
+     500     500     500     500     500     500     500     500     500     500
+     500     500     500     500     500     500     500     500     500     500
+     500     500     500     500     500     500     500     500     500     500
+     500     500     500     500     500     500     500     500     500     500
+     500     500     500     500     500     500     500     500     500     500
+     500     500     500     500     500     500     500     500     500     500
+DSS Path=
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=ConfluenceP     ,Tribuitary      ,1360    ,        ,                ,                ,                ,                                
+Interval=1HOUR
+Flow Hydrograph= 100 
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+DSS Path=
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=ConfluenceP     ,Lower           ,0       ,        ,                ,                ,                ,                                
+Friction Slope=.001,0

@@ -1,0 +1,183 @@
+[TITLE]
+;;Project Title/Notes
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           CFS
+INFILTRATION         HORTON
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+ALLOW_PONDING        NO
+SKIP_STEADY_STATE    NO
+
+START_DATE           03/13/2020
+START_TIME           00:00:00
+REPORT_START_DATE    03/13/2020
+REPORT_START_TIME    00:00:00
+END_DATE             03/13/2020
+END_TIME             06:00:00
+SWEEP_START          1/1
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+ROUTING_STEP         0:00:30 
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     PARTIAL
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.75
+LENGTHENING_STEP     0
+MIN_SURFAREA         0
+MAX_TRIALS           0
+HEAD_TOLERANCE       0
+SYS_FLOW_TOL         5
+LAT_FLOW_TOL         5
+MINIMUM_STEP         0.5
+THREADS              1
+
+[EVAPORATION]
+;;Data Source    Parameters
+;;-------------- ----------------
+CONSTANT         0.0
+DRY_ONLY         NO
+
+[JUNCTIONS]
+;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+2                265        0          0          0          0         
+3                265.8      0          0          0          0         
+4                266        0          0          0          0         
+5                266.2      0          0          0          0         
+6                267        0          0          0          0         
+7                268        0          0          0          0         
+8                269        0          0          0          0         
+9                269.8      0          0          0          0         
+10               270.5      0          0          0          0         
+11               271.2      0          0          0          0         
+12               269        0          0          0          0         
+13               270.5      0          0          0          0         
+14               270.5      0          0          0          0         
+15               271.2      0          0          0          0         
+16               0          0          0          0          0         
+17               0          0          0          0          0         
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+1                0          FREE                        NO                       
+
+[CONDUITS]
+;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+RS1-OUT          1                2                400        0.01       0          0          0          0         
+RS2-1            2                3                200        0.01       0          0          0          0         
+RS3-2            3                4                400        0.01       0          0          0          0         
+RS4-3            4                5                400        0.01       0          0          0          0         
+RS5-4            5                6                60         0.01       0          0          0          0         
+RS6-5            6                7                400        0.01       0          0          0          0         
+RS7-6            7                8                400        0.01       0          0          0          0         
+RS8-7            8                9                400        0.01       0          0          0          0         
+RS9-8            9                10               400        0.01       0          0          0          0         
+RS10-9           10               11               400        0.01       0          0          0          0         
+RS_MAIN-10       11               17               400        0.01       0          0          0          0         
+RS11-6           7                12               400        0.01       0          0          0          0         
+RS12-11          12               13               400        0.01       0          0          0          0         
+RS13-12          13               14               400        0.01       0          0          0          0         
+RS14-13          14               15               400        0.01       0          0          0          0         
+RS_TRIB-14       15               16               400        0.01       0          0          0          0         
+
+[XSECTIONS]
+;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
+;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
+RS1-OUT          TRAPEZOIDAL  30               50         6          6          1                    
+RS2-1            IRREGULAR    CS1              50         6          6          1                    
+RS3-2            IRREGULAR    CS2              50         6          6          1                    
+RS4-3            IRREGULAR    CS3              50         6          6          1                    
+RS5-4            IRREGULAR    CS4              50         6          6          1                    
+RS6-5            IRREGULAR    CS5              50         6          6          1                    
+RS7-6            TRAPEZOIDAL  30               50         6          6          1                    
+RS8-7            TRAPEZOIDAL  30               50         6          6          1                    
+RS9-8            TRAPEZOIDAL  30               50         6          6          1                    
+RS10-9           TRAPEZOIDAL  30               50         6          6          1                    
+RS_MAIN-10       TRAPEZOIDAL  30               50         6          6          1                    
+RS11-6           TRAPEZOIDAL  30               50         6          6          1                    
+RS12-11          TRAPEZOIDAL  30               50         6          6          1                    
+RS13-12          TRAPEZOIDAL  30               50         6          6          1                    
+RS14-13          TRAPEZOIDAL  30               50         6          6          1                    
+RS_TRIB-14       TRAPEZOIDAL  30               50         6          6          1                    
+
+[TRANSECTS]
+;;Transect Data in HEC-2 format
+;
+;DownstreamMain
+NC 0.01     0.01     0.01    
+X1 CS1               8        200      270      0.0      0.0      0.0      0.0      0.0     
+GR 300      0        280      50       275      200      265      210      265      260     
+GR 275      270      280      420      300      450     
+;
+NC 0.01     0.01     0.01    
+X1 CS2               8        190      256.5    0.0      0.0      0.0      0.0      0.0     
+GR 300.8    0        280.8    47.5     275.8    190      265.8    199.5    265.8    247     
+GR 275.8    256.5    280.8    399      300.8    427.5   
+;
+NC 0.01     0.01     0.01    
+X1 CS3               8        200      270      0.0      0.0      0.0      0.0      0.0     
+GR 301      100      277      150      276.5    200      266.5    210      266      260     
+GR 277      270      278      320      302      350     
+;
+NC 0.01     0.01     0.01    
+X1 CS4               8        200      270      0.0      0.0      0.0      0.0      0.0     
+GR 301.2    100      277.2    150      276.7    200      266.7    210      266.2    260     
+GR 277.2    270      278.2    320      302.2    350     
+;
+NC 0.01     0.01     0.01    
+X1 CS5               8        180      280      0.0      0.0      0.0      0.0      0.0     
+GR 301      0        281      40       277      180      267      200      268      270     
+GR 278      280      282      400      302      430     
+
+[REPORT]
+;;Reporting Options
+SUBCATCHMENTS ALL
+NODES ALL
+LINKS ALL
+
+[TAGS]
+
+[MAP]
+DIMENSIONS 0.000 0.000 10000.000 10000.000
+Units      None
+
+[COORDINATES]
+;;Node           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+2                5162.075           1150.729          
+3                5162.075           1944.895          
+4                5129.660           3630.470          
+5                5064.830           4035.656          
+6                4935.170           4440.843          
+7                4821.718           5170.178          
+8                4756.888           6061.588          
+9                4562.399           6920.583          
+10               4546.191           7714.749          
+11               4432.739           8492.707          
+12               3978.930           5559.157          
+13               3460.292           5721.232          
+14               3022.690           5786.062          
+15               2649.919           5915.721          
+16               1191.248           6385.737          
+17               4222.042           9870.340          
+1                5226.904           129.660           
+
+[VERTICES]
+;;Link           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+RS10-9           4448.947           8427.877          
+
+
+[BACKDROP]
+FILE       "C:\Users\theodore\My Documents\EPA SWMM Projects\ConfluenceWurbs\confluence.bmp"
+DIMENSIONS 1226.050 0.000 8773.950 10000.000
