@@ -1,6 +1,0 @@
-C
-      COMMON /CE2T3/ WX, DELTAT, NO8, I3Q, I4Q, IJ, QIH
-      INTEGER   NO8, I3Q, I4Q, IJ
-      REAL      WX, DELTAT, QIH(2881)
-C
-      SAVE /CE2T3/

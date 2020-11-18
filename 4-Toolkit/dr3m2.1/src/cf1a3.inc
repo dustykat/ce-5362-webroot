@@ -1,9 +1,0 @@
-C
-      COMMON /CF1A3/ ICT, IPL, JJ, KK, IFILE, IFILED, IFILEP, JRECDS,
-     #               IRECD, NRECDS, NSTRMS, JPERM, IL, JPTG,
-     #               WDMFL, DSN, DSNS, MESSFL
-      INTEGER   ICT, IPL(150), JJ, KK, IFILE, IFILED, IFILEP, JRECDS,
-     #          IRECD, NRECDS, NSTRMS, JPERM, IL, JPTG,
-     #          WDMFL, DSN(8), DSNS(MXSG), MESSFL
-C
-      SAVE /CF1A3/
