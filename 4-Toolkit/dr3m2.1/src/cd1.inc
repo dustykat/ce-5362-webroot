@@ -1,6 +1,0 @@
-C
-      COMMON /CD1  / DP, RODYS, NSD, IUNIT, NDYS, NDTS
-      INTEGER   RODYS, NSD, IUNIT, NDYS, NDTS
-      REAL      DP(7310)
-C
-      SAVE /CD1  /

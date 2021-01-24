@@ -1,6 +1,0 @@
-\contentsline {section}{\numberline {1}Steady Water Surface Profiles}{2}
-\contentsline {subsection}{\numberline {1.1}Steady Uniform Flow}{2}
-\contentsline {subsection}{\numberline {1.2}Steady Gradually Varied Flow}{2}
-\contentsline {subsubsection}{\numberline {1.2.1}Finite Difference Methods --- Fixed Depth Change Step Method}{2}
-\contentsline {subsubsection}{\numberline {1.2.2}Coding the algorithm in \textbf {R}}{3}
-\contentsline {subsubsection}{\numberline {1.2.3}Example 1 --- Backwater curve}{5}

@@ -1,6 +1,0 @@
-C
-      COMMON /CINIT/ S2, S, C, IMETH
-      INTEGER   IMETH(MXSG)
-      REAL      S2(MXSG,MXDX), S(MXSG,MXDX), C(MXSG,MXDX)
-C
-      SAVE /CINIT/
