@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css" >
+    </head>
+    <body>
+        
+        <div class="topnav">
+            <a class="active" href="../../../">Server Home Page</a>
+            <a href="../../0-Syllabus/ce-5362-swmodeling.syb.pdf">Syllabus</a>
+            <a href="../1-Lessons/">Lesson Collection</a>
+            <a href="../../2-Exercises/">Exercise Collection</a>
+            <a href="../../3-Readings/">Reading Collection</a>
+            <a href="../../4-Toolkit/">Software Collection</a>
+            <a href="#">Web Tools (On-line tools)</a>
+
+        </div>
+        
+        <div style="padding-left:16px">
+            <h2>CE 5362 Surface Water Modeling </h2>
+       Prerequesite:CE 5360 or instructor consent<br> 
+            Theory and application of hydrodynamic models.
+            Theory and application of watershed models.
+        </div>
+        
+        <h2> Lesson 2: Modeling Philosophy </h2>   
+
+        <button class="accordion">Lesson Notes/Readings</button>
+        <div class="panel">
+            <p><a href="./PresentationInLecture/Lesson2-Part1.html"> Lesson presentation (html) </a></p>
+            <p><a href="./PresentationInLecture/Lesson2-Part2.html"> Lesson presentation (html) </a></p>
+            <hr/>
+            <p><a href="../../3-Readings/"> Reading (NOS) </a></p>
+        </div>
+        
+        <button class="accordion">Workshop/Scripts</button>
+        <div class="panel">
+            <p><a href="./ScriptsInLecture/"> Scripts and Workshop Examples/Exercises </a></p>
+        </div>
+        
+        <button class="accordion">Software</button>
+        <div class="panel">
+            <p> Excel and <strong>R</strong> will be used extensively.  </p>
+<p> Simulation models will use HEC-RAS, SWMM, and EFDC (or other 2D/3D code)</p>
+</p>
+        </div>
+<!-- JavaScripts for this page -->
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        }
+    }
+</script>
+
+    </body>
+</html>

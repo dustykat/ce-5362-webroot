@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css" >
+    </head>
+    <body>
+        
+        <div class="topnav">
+            <a class="active" href="../">Course Home Page</a>
+            <a href="../0-Syllabus/ce5362-swmodeling-2021-1.html">Syllabus</a>
+            <a href="../1-Lessons/">Lessons</a>
+            <a href="../2-Exercises/">Exercises</a>
+            <a href="../3-Readings/">Readings</a>
+	    <a href="http://theodore-odroid.ttu.edu/documents/toolbox/">Toolkit</a>
+            <a href="http://atomickitty.ddns.net/moodle/">Moodle (LMS) Site</a>
+
+        </div>
+        
+	<div style="padding-left:16px">
+            <h2>CE 5362 Surface Water Modeling </h2>
+       
+
+        </div>
+        
+        
+
+        <button class="accordion">Description</button>
+        <div class="panel">
+
+<p>The course trains engineers to practice hydrologic and hydraulic modeling
+        in one-dimensional unsteady conditiond; and in higher sparial dimensions (2D/3D) using 
+        custom-written and professional software tools.
+        Integration of simulation tools to examine complex systems is emphasized.
+	<br/><br/>
+	The course provides an experience in different modeling platforms(DIY, HEC-RAS, SWMM, EFDC) 	
+	to answer hydrodynamic questions using non-trivial examples.<br/><br/>
+	Upon successful completion of this course, the participant will have:<br>
+        1. Review relevant theory for 1D dynamic wave routing. <br>
+	2. Develop and code a Lax-Diffusion method for time-varying flow in an
+           open channel and compared results with HEC-RAS unsteady and SWMM. 
+        <br>
+	3. Simulate the confluence of two streams in steady and unsteady conditions
+         (fabricated conditions) using HEC-RAS or SWMM (1D-spatial)
+        <br>
+	4. Simulate the confluence of White Oak and Buffalo Bayou in steady and unsteady conditions
+         using HEC-RAS or SWMM (1D-spatial)
+         <br>
+        5. Simulate a large-scale (county) drainage network <br> 
+	6. Examine theory for 2D estuary/floodplain modeling 
+        <br>
+        7. Develop a quasi-2D model using SWMM
+        8. Develop and code a diffusion approximation for 2D floodplain
+        <br>
+        9. Simulate selected examples using EFDC
+        <br>
+       &nbsp&nbsp&nbsp a). Simulate 2D steady in East Lab Flume (real flume)
+        <br>
+       &nbsp&nbsp&nbsp b). Simulate 2D steady White River
+        <br> 
+       &nbsp&nbsp&nbsp c). Simulate 2D unsteady "simple estuary" with river inflow
+        <br>
+       &nbsp&nbsp&nbsp d). Simulate 2D unsteady San Antonio Bay with salinity tracking 
+	</p>
+
+        </div>
+        
+        <button class="accordion"> One-Dimensional Flow (Lessons 1-9) </button>
+        <div class="panel">
+<p><a href="./Lesson01/"> Lesson-1 </a> Introduction, Syllabus, and Course Resources </p>
+<p><a href="./Lesson02/"> Lesson-2 </a> Modeling Philosophy, Hydraulics Review </p>
+<p><a href="./Lesson03/"> Lesson-3 </a> Steady Flow Algorithms and Code I </p>
+<p><a href="./Lesson04/"> Lesson-4 </a> Steady Flow Algorithms and Code II </p>
+<p><a href="./Lesson05/"> Lesson-5 </a> Unsteady Flow Algorithms (Lax Scheme) I </p>
+<p><a href="./Lesson06/"> Lesson-6 </a> Unsteady Flow Algorithms (Lax Scheme) II </p>
+<p><a href="./Lesson07/"> Lesson-7 </a> </p>
+<p><a href="./Lesson08/"> Lesson-8 </a>  </p>
+<p><a href="./Lesson09/"> Lesson-9 </a>  </p>
+
+
+        </div>
+<button class="accordion"> Confluence of Tribuitaries (Lessons 10-13) </button>
+        <div class="panel">
+
+<p><a href="./Lesson10/"> Lesson-10 </a> HEC-RAS Unsteady I </p>
+<p><a href="./Lesson11/"> Lesson-11 </a> HEC-RAS Unsteady II </p>
+<p><a href="./Lesson12/"> Lesson-12 </a> Confluence (Wurbs and James) </p>
+<p><a href="./Lesson13/"> Lesson-13 </a> Confluence (Wang et. al.) </p>
+
+</div>
+<button class="accordion"> Two-Dimensional (Planar) Flow  (Lessons 14-17) </button>
+        <div class="panel">
+
+<p><a href="./Lesson14/"> Lesson-14 </a> 2D/3D Conservation of Mass and Momentum </p>
+<p><a href="./Lesson15/"> Lesson-15 </a> Diffusion Approximation (Ignore Inertia) </p>
+<p><a href="./Lesson16/"> Lesson-16 </a> Diffusion Approximation (Dampen Inertia) </p>
+<p><a href="./Lesson17/"> Lesson-17 </a> Diffusion Hydrodynamic Model </p>
+<p><a href="#"          > Lesson-XX </a> SToRM/iRIC Model </p>
+<p><a href="#"          > Lesson-XX </a> EFDC Model </p>
+
+</div>
+<button class="accordion"> Two-Dimensional Applications  (Lessons 18-24) </button>
+        <div class="panel">
+
+<p><a href="./Lesson18/"> Lesson-18 </a>SToRM Tutorial Application (Steady)</p>
+<p><a href="./Lesson19/"> Lesson-19 </a>SToRM Tutorial (Unsteady)</p>
+<p><a href="./Lesson20/"> Lesson-20 </a>SToRM Simple Estuary (Unsteady)  </p>
+<p><a href="./Lesson21/"> Lesson-21 </a>SToRM Pond-in-Pond Case Study (Steady)  </p>
+<p><a href="./Lesson22/"> Lesson-22 </a>SToRM Confluence (Wang et. al.)(Unsteady)  </p>
+<p><a href="./Lesson23/"> Lesson-23 </a>  </p>
+<p><a href="./Lesson24/"> Lesson-24 </a>  </p>
+</div>
+<!-- JavaScripts for this page -->
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        }
+    }
+</script>
+
+    </body>
+</html>
