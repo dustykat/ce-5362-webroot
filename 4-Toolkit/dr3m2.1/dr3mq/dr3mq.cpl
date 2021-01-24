@@ -1,0 +1,13 @@
+/* dr3mq.cpl
+                                            /*
+&set_var HOME := sw.models>dr3m91.0         /* source directory
+                                            /*
+type; type Running DR3M-QUAL from %HOME% ; type
+type [date -dow]', '[date -cal] [date -ampm]; type
+                                            /*
+&data r %HOME%>dr3mq
+&end
+                                            /*
+type; type finished processing DR3M-QUAL; type
+                                            /*
+&return

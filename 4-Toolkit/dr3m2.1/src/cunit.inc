@@ -1,0 +1,5 @@
+C
+      COMMON /CUNIT/ Q, R, FLW, FLAT, FUP
+      REAL      Q(MXDT), R(MXDT), FLW(MXDT), FLAT(MXDT), FUP(MXDT)
+C
+      SAVE /CUNIT/
