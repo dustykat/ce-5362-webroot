@@ -1,0 +1,117 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {17}Steady Groundwater Flow}{194}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {17.1}Confined Aquifer Flow}{194}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {17.1.1}Finite-Difference Methods -- 1 Spatial Dimension}{194}}
+\newlabel{lst:AquiferFlowSteady1Dimensional}{{52}{195}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {52}R code demonstrating an Aquifer Flow Simulator for Steady Flow \\ This fragment of code contains ...}{195}}
+\@writefile{lof}{\contentsline {figure}{\numberline {115}{\ignorespaces Schematic diagram of unidirectional flow in a generic aquifer, showing heads in two measuring wells. The diagram is annotated with the cell spacing for the example (in magenta), as well as the cell ID. The aquifer material properties are constant (K=0.2 m/s). The head in the left well (Well 1) is 100 meters. The head in the right well (Well 2) is 60 meters.\relax }}{196}}
+\newlabel{fig:1D-aquifer-flow-fdm}{{115}{196}}
+\newlabel{lst:1D-input-case1}{{53}{197}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {53}Input File for Example Problem \\ This fragment of code contains ...}{197}}
+\@writefile{lof}{\contentsline {figure}{\numberline {116}{\ignorespaces Plot of computed head in each cell using Jacobi interation. The head in the left well (Well 1) is 100 meters. The head in the right well (Well 2) is 60 meters. The steady flow solution is the blue line labelled ``Computed Head Array".\relax }}{198}}
+\newlabel{fig:aquifer-1d-solution-case1}{{116}{198}}
+\newlabel{lst:AquiferFlowSteady1DimensionalLinearSys}{{54}{200}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {54}R code demonstrating an Aquifer Flow Simulator for Steady Flow \\ This version constructs coefficient matrix then solves the linear system. The program uses the same input file}{200}}
+\newlabel{lst:1D-input-case2}{{55}{201}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {55}Input File for Example Problem \\}{201}}
+\@writefile{lof}{\contentsline {figure}{\numberline {117}{\ignorespaces Plot of computed head in each cell using different cell spacing. The head in the left well (Well 1) is 100 meters. The head in the right well (Well 2) is 60 meters. The steady flow solution is the blue line labelled ``Computed Head Array".\relax }}{201}}
+\newlabel{fig:aquifer-1d-solution-case2}{{117}{201}}
+\newlabel{lst:1D-input-case3}{{56}{202}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {56}Input File for Example Problem \\}{202}}
+\@writefile{lof}{\contentsline {figure}{\numberline {118}{\ignorespaces Plot of computed head in each cell using different cell spacing. The head in the left well (Well 1) is 100 meters. The head in the right well (Well 2) is 60 meters. The steady flow solution is the blue line. The apparent curvature is really the three different slopes anticipated as the material properties change.\relax }}{202}}
+\newlabel{fig:aquifer-1d-solution-case3}{{118}{202}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {17.1.2}Finite-Difference Methods -- 2 Spatial Dimensions}{202}}
+\newlabel{eqn:confined-aquifer-flow-PDE2D}{{217}{202}}
+\@writefile{lof}{\contentsline {figure}{\numberline {119}{\ignorespaces Plan view schematic of 2-dimensional multiple cell balance computational stencil\relax }}{203}}
+\newlabel{fig:multiple-cell-balance-2d}{{119}{203}}
+\@writefile{lof}{\contentsline {figure}{\numberline {120}{\ignorespaces Schematic of 2-dimensional aquifer. The left and right boundaries are constant head boundaries, whereas the upper and lower boundaries are no-flow\relax }}{205}}
+\newlabel{fig:aquifer-2d-layout}{{120}{205}}
+\newlabel{lst:2D-Jacobi}{{57}{206}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {57}R code demonstrating an Aquifer Flow Simulator for 2D Steady Flow. This code fragment implements the Jacobi iteration. A subsequent listing shows the contour plot syntax. In the example the two fragments are joined and run as a single source file \\}{206}}
+\newlabel{lst:2D-Contour}{{58}{207}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {58}R code demonstrating building a contour plot from the computed head distribution \\}{207}}
+\newlabel{lst:2D-input-case1}{{59}{207}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {59}Input File for Example Problem \\}{207}}
+\@writefile{lof}{\contentsline {figure}{\numberline {121}{\ignorespaces Output from \textbf  {R} script for 2D model. Observe how the X-axis is plotted upward, and the Y-axis is plotter left to right. The plotting is because of how ROWS and COLUMNS were indexed in the script. Rather than alter the script, I find it easier to rotate the problem for practical application.\relax }}{208}}
+\newlabel{fig:aquifer-2d-contour1}{{121}{208}}
+\@writefile{lof}{\contentsline {figure}{\numberline {122}{\ignorespaces Output from \textbf  {R} script for 2D model, rotated and annotated to fit the original problem statement\relax }}{209}}
+\newlabel{fig:aquifer-2d-contour2}{{122}{209}}
+\@writefile{lof}{\contentsline {figure}{\numberline {123}{\ignorespaces Schematic of vertical slice in an aquifer with low permeability inclusion. Values are indicated on the schematic \relax }}{210}}
+\newlabel{fig:aquifer-2d-lowKinclusion}{{123}{210}}
+\newlabel{lst:2DinclusionHead}{{60}{211}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {60}2D Steady Confined Aquifer Flow Script}{211}}
+\newlabel{lst:2DinclusionHeadPlot}{{61}{212}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {61}Contour plotting script}{212}}
+\newlabel{lst:2DinclusionInput}{{62}{212}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {62}Input file for 2D vertical slice confined aquifer with low permeability inclusion. The comments in the listing should be removed for running the program}{212}}
+\@writefile{lof}{\contentsline {figure}{\numberline {124}{\ignorespaces Vertical slice in an aquifer with low permeability inclusion using Jacobi iteration scripts\relax }}{213}}
+\newlabel{fig:LowPInclusionOut}{{124}{213}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {17.1.3}Generalizing the Boundary Conditions}{213}}
+\newlabel{lst:BoundaryMask}{{63}{214}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {63}Script fragments for implementing generalized boundary conditions}{214}}
+\newlabel{lst:BoundaryInputFile}{{64}{214}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {64}Input file for 2D vertical slice confined aquifer with low permeability inclusion using a generalized boundary mask. The comments in the listing should be removed for running the program}{214}}
+\@writefile{lof}{\contentsline {figure}{\numberline {125}{\ignorespaces Schematic of a dam on permeable soil with the sheet pile curtain underneath the dam\relax }}{215}}
+\newlabel{fig:DamSeepage}{{125}{215}}
+\newlabel{lst:DamSeepage}{{65}{216}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {65}Input file for 2D vertical slice for Dam Seepage Example}{216}}
+\@writefile{lof}{\contentsline {figure}{\numberline {126}{\ignorespaces Screen capture of the script run with the different input file\relax }}{218}}
+\newlabel{fig:DamSeepageInR}{{126}{218}}
+\@writefile{lof}{\contentsline {figure}{\numberline {127}{\ignorespaces Output file loaded into Excel for further analysis\relax }}{218}}
+\newlabel{fig:DamSeepageInExcel}{{127}{218}}
+\@writefile{lof}{\contentsline {figure}{\numberline {128}{\ignorespaces Output file loaded into Excel for further analysis\relax }}{219}}
+\newlabel{fig:DamSeepageHalf}{{128}{219}}
+\newlabel{lst:DamSeepageHalf}{{66}{219}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {66}Input file for 2D vertical slice for Dam Seepage Example using Symmetry}{219}}
+\@writefile{lof}{\contentsline {figure}{\numberline {129}{\ignorespaces Output file loaded into Excel for further analysis\relax }}{220}}
+\newlabel{fig:DamSeepageHalfInR}{{129}{220}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {17.1.4}Internal sources/sinks to handle a discharge (well) at a specific location}{221}}
+\newlabel{eqn:confined-aquifer-flow-PDE2D-Wells}{{227}{221}}
+\newlabel{lst:AddWellsFrags}{{67}{221}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {67}Input file for 2D Steady flow with generalized boundary conditions and wells}{221}}
+\@writefile{lof}{\contentsline {figure}{\numberline {130}{\ignorespaces Rectangular aquifer with 4 wells\relax }}{223}}
+\newlabel{fig:4WellsSteady}{{130}{223}}
+\newlabel{lst:wellfield}{{68}{224}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {68}Input file for 4 well example}{224}}
+\@writefile{lof}{\contentsline {figure}{\numberline {131}{\ignorespaces Rectangular aquifer with 4 wells\relax }}{227}}
+\newlabel{fig:4WellsSteadyInR}{{131}{227}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {17.2}Unconfined Aquifer Flow}{227}}
+\newlabel{eqn:unconfined-mcb-2}{{229}{227}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {17.2.1}Finite-Difference Methods}{227}}
+\@writefile{lof}{\contentsline {figure}{\numberline {132}{\ignorespaces Rectangular aquifer with 4 wells\relax }}{230}}
+\newlabel{fig:4WellsSteadyUnconfined}{{132}{230}}
+\newlabel{lst:UnconfinedSteady}{{69}{230}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {69}\textbf  {R} script implementing unconfined aquifer flow computations with wells and generalized boundary conditions.}{230}}
+\newlabel{lst:wellfield2}{{70}{232}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {70}Relevant portion of input file for unconfined flow example. Only the pumping values are different.}{232}}
+\@writefile{lof}{\contentsline {figure}{\numberline {133}{\ignorespaces Rectangular unconfined aquifer with 4 wells. Solution and plotting using \textbf  {R}\relax }}{233}}
+\newlabel{fig:4WellsSteadyUnconfinedInR}{{133}{233}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {17.3}Exercises}{234}}
+\@writefile{lof}{\contentsline {figure}{\numberline {134}{\ignorespaces Obleo Aquifer Setting (Plan View)\relax }}{235}}
+\newlabel{fig:Obleo}{{134}{235}}
+\@setckpt{./17-SteadyGroundwaterFlow/SteadyGroundwaterFlow}{
+\setcounter{page}{236}
+\setcounter{equation}{235}
+\setcounter{enumi}{2}
+\setcounter{enumii}{10}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{67}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{section}{17}
+\setcounter{subsection}{3}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{134}
+\setcounter{table}{6}
+\setcounter{NAT@ctr}{0}
+\setcounter{parentequation}{0}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{AM@survey}{0}
+\setcounter{lstnumber}{11}
+\setcounter{ContinuedFloat}{0}
+\setcounter{lstlisting}{70}
+}
