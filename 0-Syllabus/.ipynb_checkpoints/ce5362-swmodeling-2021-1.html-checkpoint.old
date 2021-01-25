@@ -13074,6 +13074,87 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Script block to identify host, user, and kernel</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="o">!</span> hostname
+<span class="o">!</span> whoami
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">)</span>
+<span class="c1"># Script block to left align Markdown Tables</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>atomickitty
+orion
+/opt/jupyterhub/bin/python3
+3.8.2 (default, Jul 16 2020, 14:00:26) 
+[GCC 9.3.0]
+sys.version_info(major=3, minor=8, micro=2, releaselevel=&#39;final&#39;, serial=0)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="nt">table</span> <span class="p">{</span><span class="k">margin-left</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13257,74 +13338,6 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Resources/Tools">Resources/Tools<a class="anchor-link" href="#Resources/Tools">&#182;</a></h2><h3 id="Amazon-Web-Services">Amazon Web Services<a class="anchor-link" href="#Amazon-Web-Services">&#182;</a></h3><ol>
-<li>Lightsail (Virtual Private Server) Instances: Low cost (~24 USD/month or less) compute servers for running models on a remote AWS maintained machine. This is what the instructor will use for <strong>Jupyter notebooks, and the various professional tools.</strong></li>
-</ol>
-<h3 id="Additional-Platforms-for-Python">Additional Platforms for Python<a class="anchor-link" href="#Additional-Platforms-for-Python">&#182;</a></h3><ol>
-<li><p>Anaconda platform (<a href="https://www.anaconda.com/">https://www.anaconda.com/</a>): Anaconda distribution is an open-source Data Science Distribution Development Platform.  It includes Python 3 with over 1,500 data science packages making it easy to manage libraries and dependencies.  Available in Linux (x86-64 only), Windows, and Mac OS X.</p>
-</li>
-<li><p>Jupyter (<a href="https://jupyter.org/">https://jupyter.org/</a>): JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. JupyterLab is flexible: Configure and arrange the user interface to support a wide range of workflows in data science, scientific computing, and machine learning. <code>note</code> Anaconda for MacOS includes a JupyterLab instance, so a separate install is not required.</p>
-</li>
-</ol>
-<h4 id="Additional-Modules">Additional Modules<a class="anchor-link" href="#Additional-Modules">&#182;</a></h4><ol>
-<li>Math module (<a href="https://docs.python.org/3/library/math.html">https://docs.python.org/3/library/math.html</a>): Gives access to the mathematical functions defined by the C standard e.g. factorial, gcd, exponential, logarithm. </li>
-<li>Operator module (<a href="https://docs.python.org/3/library/operator.html">https://docs.python.org/3/library/operator.html</a>): Helps in exporting a set of efficient functions corresponding to the intrinsic operators of Python.  For example, the operator add(x,y) is equivalent to the expression x+y.</li>
-<li>Scipy module (<a href="https://www.scipy.org/">https://www.scipy.org/</a>): A Python-based ecosystem of open-source software for mathematics, science, and engineering. Some of the core packages are:<ul>
-<li>Numpy: Provides n-dimensional array package</li>
-<li>Scipy: Fundamental for scientific computing (e.g. linear algorithm, optimization)</li>
-<li>Matplotlib: Visualizations/2D plotting</li>
-<li>IPython: Enhanced interactive console &lt;&lt;= this is the kernel used in JupyterLab</li>
-<li>Pandas: Data structures and data analysis</li>
-</ul>
-</li>
-<li>Scikit-learn module (<a href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a>): A library for machine learning in Python. It is a simple and efficient tool for predictive data analysis.  It is built on NumPy, SciPy, and matplotlib modules.</li>
-</ol>
-<p>In fact this syllabus was created using a JupyterLab notebook (as a markdown processor).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
-<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-  <span class="nt">table</span> <span class="p">{</span><span class="k">margin-left</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;}</span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<style>
-  table {margin-left: 0 !important;}
-</style>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Course-Schedule">Course Schedule<a class="anchor-link" href="#Course-Schedule">&#182;</a></h2><table>
 <thead><tr>
 <th style="text-align:left">Item</th>
@@ -13632,49 +13645,6 @@ office in 335 West Hall or call 806.742.2405.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Script block to identify host, user, and kernel</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="o">!</span> hostname
-<span class="o">!</span> whoami
-<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">)</span>
-<span class="c1"># Script block to left align Markdown Tables</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>atomickitty.aws
-antares
-/opt/jupyterhub/bin/python3
-3.6.9 (default, Oct  8 2020, 12:12:24) 
-[GCC 8.4.0]
-sys.version_info(major=3, minor=6, micro=9, releaselevel=&#39;final&#39;, serial=0)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
