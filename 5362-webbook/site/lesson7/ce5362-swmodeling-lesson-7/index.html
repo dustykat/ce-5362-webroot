@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Lesson 7 Unsteady Lax-Scheme - Surface Water Modeling</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Surface Water Modeling</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../ce5362-swmodeling-lesson-1/">Lesson 1 Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 2 Modeling Philosophy</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../lesson2/ce5362-swmodeling-lesson-2.1/">Part 1 Modeling</a>
+</li>
+            
+<li >
+    <a href="../../lesson2/ce5362-swmodeling-lesson-2.2/">Part 2 St. Venant Equations</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../lesson5/ce5362-swmodeling-lesson-5/">Lesson 5 GVF Variable Step-Backwater</a>
+</li>
+                                    
+<li >
+    <a href="../../lesson6/ce5362-swmodeling-lesson-6/">Lesson 6 GVF Fixed Step-Backwater</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Lesson 7 Unsteady Lax-Scheme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../untitled/">Readings</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homework <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 1 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 2 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 3 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 4 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 5 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 6 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 7 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 8 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 9 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 10 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 11 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 12 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 13 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 14 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Exams <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Exam 1 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Exam 1 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Exam 2 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Exam 2 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 3</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Exam 3 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Exam 3 Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../lesson6/ce5362-swmodeling-lesson-6/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../untitled/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#ce-5362-lesson-7-unsteady-open-channel-flow">CE 5362 Lesson 7 Unsteady Open Channel Flow</a></li>
+            <li><a href="#finite-difference-method-for-unsteady-open-channel-flow">Finite-Difference Method for Unsteady Open Channel Flow</a></li>
+            <li><a href="#governing-difference-equations-lax-scheme">Governing Difference Equations -- Lax Scheme</a></li>
+            <li><a href="#mapping-from-the-physical-to-computational-domain">Mapping from the Physical to Computational Domain</a></li>
+            <li><a href="#building-the-difference-equations">Building the Difference Equations</a></li>
+            <li><a href="#example-1-steady-flow-over-a-weir">Example 1: Steady Flow over a Weir</a></li>
+            <li><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="ce-5362-lesson-7-unsteady-open-channel-flow">CE 5362 Lesson 7 Unsteady Open Channel Flow</h1>
+<hr />
+<h2 id="finite-difference-method-for-unsteady-open-channel-flow">Finite-Difference Method for Unsteady Open Channel Flow</h2>
+<p>Solving the St. Venant Equations is accomplished by mapping the physical system and the set of partial differential equations into an algebraic structure that a computer can  manipulate.   Finite-difference,  finite-element,  finite-volume,  and  marker-in-cell are the typical methods.  </p>
+<p>The simplest form of solution that is conditionally stable and reasonably straightforward to program is called the Lax-Diffusion scheme.  This  scheme  is  reasonably  accurate  and  useful  for  practical  problems  as  well  as  to learn what goes on under the hood of a professional tool like SWMM or HEC-RAS.</p>
+<h2 id="governing-difference-equations-lax-scheme">Governing Difference Equations -- Lax Scheme</h2>
+<p>The finite-difference analysis converts the two PDEs into an algebraic update struc-ture and maps boundary conditions onto a computational domain.  The two PDEs are continuity and momentum.  As a quick refresher:</p>
+<p>The continuity equation for a computational cell (reach) is 
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial y}{\partial t} = -\frac{A}{B}\frac{\partial V}{\partial x}-V\frac{\partial y}{\partial x}
+\end{equation}</script>
+</p>
+<h3 id="continunity">Continunity</h3>
+<p>
+<script type="math/tex">A</script> is the depth-area function (a function of x and y). 
+<script type="math/tex">B</script> is the depth-topwidth function (a function of x and y). 
+The Lax scheme uses spatial averaging to represent the <script type="math/tex">A</script>, <script type="math/tex">B</script>, and <script type="math/tex">V</script> terms that appear as coefficients on the partial derivatives on the right-hand side of the equation. 
+The time derivative is accomplished with a conventional forward-in-time first order finite difference model, and the spatial derivatives are conventional first-order centered differences. Both these differencing schemes are prestented shortly.</p>
+<h3 id="momentum">Momentum</h3>
+<p>The momentum equation is
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial V}{\partial t} = g(S_0-S_f)-V\frac{\partial V}{\partial x}-g\frac{\partial y}{\partial x}
+\end{equation}</script>
+and also uses spatial averages for the coefficients on the spatial derivatives in the right hand side of the equation as well as spatial averages for the friction and topographic slopes. 
+Friction slope can be recovered using any resistance model, Chezy-Manning's is typical.</p>
+<hr />
+<h2 id="mapping-from-the-physical-to-computational-domain">Mapping from the Physical to Computational Domain</h2>
+<p>The next important step is to map the physical world to the computer world.</p>
+<p><img alt="" src="../stream-schematic.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">Figure 1. Plan view of a stream.  Flow in figure is from left to right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Figure 1 is a schematic of a stream that is to be modeled. The stream has some width, depth, and path. 
+The dashed line in the figure is the thalweg and is the pathline of the stream.  Distances in the computational model are along this path.  The conventional orientation is "looking downstream." So when the cross sections are stationed the distances in a cross section are usually referenced as distanced from the left bank, looking downstream.</p>
+<p>Figure 2 is a schematic that depicts the relationship of left-bank, cross section, elevations, and such -- all referenced to the concept of "looking downstream."</p>
+<p><img alt="" src="../stream-section-schematic.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">Figure 2. Schematic of relationship of cross-section, elevation, and left bank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Figure 3 is a schematic of the next step of mapping into the computational domain. </p>
+<p><img alt="" src="../stream-discritize.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">Figure 3. Schematic of physical interpretation of a reach, cell, and node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>In the figure the stream is divided into cells called reaches (or cells, depends on context and author). The centroid of the reach is called the node, and most of the arithmetic is written with the understanding that all properties of the reach are somehow "averaged" and these averages are assigned to these nodes.  Adjacent nodes are connected (in the computer) by links (which represent conduits between nodes). The continuity and momentum equations collectively describe the node average behavior (such as depth) and link behavior (such as momentum flux).</p>
+<p>Figure 4 is a schematic of three adjacent nodes that is used to develop the difference equations.</p>
+<p><img alt="" src="../stream-node-scheme.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">Figure 4. Schematic of three adjacent nodes, with average depth and section velocity depicted at the node.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>In the figure both the velocities and depths are mapped to the node (Lax-Diffusion scheme), but other schemes map the velocities to the interfaces. Again this decision affects the differencing scheme; the differencing scheme chooses the location. A kind of chicken and egg situation. </p>
+<p>At this point the mapping has <strong>abstracted</strong> considerably from the physical world and the computer world loses the sense of
+sinuosity. In this development, we will assume the reach lengths are all the same value, the velocities are all parallel to the local thalweg and perpendicular to the cross sections, and the depth is measured from the channel bottom. The differencing scheme then replaces the continuity and momentum PDEs with update equations to map the water surface position and mean section velocity at the nodes to different moments in time. The updating is called time-stepping.</p>
+<hr />
+<h2 id="building-the-difference-equations">Building the Difference Equations</h2>
+<p>The partial derivatives are replaced with difference quotients that approximate their behavior.<br />
+The mapping in some sense influences the resulting difference scheme. </p>
+<h3 id="time-differences">Time Differences</h3>
+<p>A first-order time difference is 
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial y}{\partial t}~\approx~\frac{y_i^{t+\Delta t}-y_i^t}{\Delta t}
+\end{equation}</script>
+Lax replaced the known time-level term with its spatial average from adjacent cells.
+For the depth;
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial y}{\partial t}~\approx~\frac{y_i^{t+\Delta t}-\frac{1}{2}(y_{i-1}^t+y_{i+1}^t)}{\Delta t}
+\end{equation}</script>
+Similarly for mean section velocity
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial V}{\partial t}~\approx~\frac{V_i^{t+\Delta t}-\frac{1}{2}(V_{i-1}^t+V_{i+1}^t)}{\Delta t}
+\end{equation}</script>
+</p>
+<h3 id="space-differences">Space Differences</h3>
+<p>Lax used centered differences for the spatial derivatives
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial y}{\partial x}~\approx~\frac{y_{i+1}^{t}-y_{i-1}^t}{2\Delta x}
+\end{equation}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial V}{\partial x}~\approx~\frac{V_{i+1}^{t}-V_{i-1}^t}{2\Delta x}
+\end{equation}</script>
+Lax also used spatial averages for the depth-area and slope functions
+<script type="math/tex; mode=display">\begin{equation}
+\frac{1}{2}(\frac{A}{B}\vert_{i-1}^t + \frac{A}{B}\vert_{i+1}^t)
+\end{equation}</script>
+<script type="math/tex; mode=display">\begin{equation}
+\frac{1}{2}(S_{f,i-1}^t + S_{f,i+1}^t)
+\end{equation}</script>
+</p>
+<p>These difference formulations are substituted into continunity and momentum and then rearranged to isolate the terms at the <script type="math/tex">t+\Delta t</script> time level.</p>
+<h3 id="continunity_1">Continunity</h3>
+<p>Starting with the PDE,
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial y}{\partial t} = -\frac{A}{B}\frac{\partial V}{\partial x}-V\frac{\partial y}{\partial x}
+\end{equation}</script>
+first replace the time derivative
+<script type="math/tex; mode=display">\begin{equation}
+\frac{y_i^{t+\Delta t}-\frac{1}{2}(y_{i-1}^t+y_{i+1}^t}{\Delta t} = -\frac{A}{B}\frac{\partial V}{\partial x}-V\frac{\partial y}{\partial x}
+\end{equation}</script>
+then replace the space derivatives
+<script type="math/tex; mode=display">\begin{equation}
+\frac{y_i^{t+\Delta t}-\frac{1}{2}(y_{i-1}^t+y_{i+1}^t}{\Delta t} = -\frac{A}{B}\frac{V_{i+1}^{t}-V_{i-1}^t}{2\Delta x}-V\frac{y_{i+1}^{t}-y_{i-1}^t}{2\Delta x}
+\end{equation}</script>
+then the spatial averages for the remaining terms.
+<script type="math/tex; mode=display">\begin{equation}
+\begin{matrix}
+\frac{y_i^{t+\Delta t}-\frac{1}{2}(y_{i-1}^t+y_{i+1}^t)}{\Delta t} = -\frac{1}{2}(\frac{A}{B}\vert_{i-1}^t + \frac{A}{B}\vert_{i+1}^t)\frac{V_{i+1}^{t}-V_{i-1}^t}{2\Delta x}-\frac{1}{2}(V_{f,i-1}^t + V_{f,i+1}^t)\frac{y_{i+1}^{t}-y_{i-1}^t}{2\Delta x}\\
+~\\
+ \end{matrix}
+\end{equation}</script>
+Next multiply by <script type="math/tex">\Delta t</script>
+<script type="math/tex; mode=display">\begin{equation}
+\begin{matrix}
+y_i^{t+\Delta t}-\frac{1}{2}(y_{i-1}^t+y_{i+1}^t) = -\Delta t\frac{1}{2}(\frac{A}{B}\vert_{i-1}^t + \frac{A}{B}\vert_{i+1}^t)\frac{V_{i+1}^{t}-V_{i-1}^t}{2\Delta x}-\Delta t \frac{1}{2}(V_{f,i-1}^t + V_{f,i+1}^t)\frac{y_{i+1}^{t}-y_{i-1}^t}{2\Delta x}\\
+~\\
+ \end{matrix}
+\end{equation}</script>
+Move the time level <script type="math/tex">t</script> term to the right hand side
+<script type="math/tex; mode=display">\begin{equation}
+\begin{matrix}
+y_i^{t+\Delta t} = \frac{1}{2}(y_{i-1}^t+y_{i+1}^t) -\Delta t\frac{1}{2}(\frac{A}{B}\vert_{i-1}^t + \frac{A}{B}\vert_{i+1}^t)\frac{V_{i+1}^{t}-V_{i-1}^t}{2\Delta x}-\Delta t \frac{1}{2}(V_{f,i-1}^t + V_{f,i+1}^t)\frac{y_{i+1}^{t}-y_{i-1}^t}{2\Delta x}\\
+~\\
+ \end{matrix}
+\end{equation}</script>
+Rename the constant  <script type="math/tex">\frac{\Delta t}{2 \Delta x} = r</script> and simplify
+<script type="math/tex; mode=display">\begin{equation}
+\begin{matrix}
+y_i^{t+\Delta t} = \frac{1}{2}(y_{i-1}^t+y_{i+1}^t) -\frac{r}{2}(\frac{A}{B}\vert_{i-1}^t + \frac{A}{B}\vert_{i+1}^t)(V_{i+1}^{t}-V_{i-1}^t)-\frac{r}{2}(V_{f,i-1}^t + V_{f,i+1}^t)(y_{i+1}^{t}-y_{i-1}^t) \\
+~\\
+ \end{matrix}
+ \label{eqn:lax-continunity}
+\end{equation}</script>
+</p>
+<h3 id="momentum_1">Momentum</h3>
+<p>Again, starting with the PDE, make the time substitution
+<script type="math/tex; mode=display">\begin{equation}
+\frac{V_i^{t+\Delta t}-\frac{1}{2}(V_{i-1}^t+V_{i+1}^t)}{\Delta t} = g(S_0-S_f)-V\frac{\partial V}{\partial x}-g\frac{\partial y}{\partial x}
+\end{equation}</script>
+next the space derivatives
+<script type="math/tex; mode=display">\begin{equation}
+\begin{matrix}
+\frac{V_i^{t+\Delta t}-\frac{1}{2}(V_{i-1}^t+V_{i+1}^t)}{\Delta t} = g(S_0-S_f)-V\frac{V_{i+1}^{t}-V_{i-1}^t}{2\Delta x}-g\frac{y_{i+1}^{t}-y_{i-1}^t}{2\Delta x}\\
+~\\
+\end{matrix}
+\end{equation}</script>
+then the spatial averages (If the channel slope is changing, then this would be subjected to a spatial averaging scheme too!)</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\begin{matrix}
+\frac{V_i^{t+\Delta t}-\frac{1}{2}(V_{i-1}^t+V_{i+1}^t)}{\Delta t} = 
+g(S_0-\frac{1}{2}(S_{f,i-1}^t + S_{f,i+1}^t))
+-\frac{1}{2}(V_{i-1}^t+V_{i+1}^t) \frac{V_{i+1}^{t}-V_{i-1}^t}{2\Delta x}
+-g\frac{y_{i+1}^{t}-y_{i-1}^t}{2\Delta x}\\
+~\\
+\end{matrix}
+\end{equation}</script>
+Multiply by <script type="math/tex">\Delta t</script>
+<script type="math/tex; mode=display">\begin{equation}
+\begin{matrix}
+V_i^{t+\Delta t}-\frac{1}{2}(V_{i-1}^t+V_{i+1}^t)= 
+\Delta t  g(S_0-\frac{1}{2}(S_{f,i-1}^t + S_{f,i+1}^t))
+-\Delta t  \frac{1}{2}(V_{i-1}^t+V_{i+1}^t) \frac{V_{i+1}^{t}-V_{i-1}^t}{2\Delta x}
+-\Delta t  g\frac{y_{i+1}^{t}-y_{i-1}^t}{2\Delta x}\\
+~\\
+\end{matrix}
+\end{equation}</script>
+</p>
+<p>Rename the constant  <script type="math/tex">\frac{\Delta t}{2 \Delta x} = r</script> and isolate the <script type="math/tex">t + \Delta t</script> term</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\begin{matrix}
+V_i^{t+\Delta t}=\frac{1}{2}(V_{i-1}^t+V_{i+1}^t) +
+\Delta t  g(S_0-\frac{1}{2}(S_{f,i-1}^t + S_{f,i+1}^t))
+- \frac{r}{2}(V_{i-1}^t+V_{i+1}^t) (V_{i+1}^{t}-V_{i-1}^t)
+-rg(y_{i+1}^{t}-y_{i-1}^t)\\
+~\\
+\end{matrix}
+\label{eqn:lax-momentum}
+\end{equation}</script>
+</p>
+<p>The pair of update equations are the interior point update equations.</p>
+<p>Figure 5 depicts the updating information transfer. </p>
+<p>At each cell the three known values of a variable (<script type="math/tex">y</script> or <script type="math/tex">V</script>) are projected to the next time line as depicted in the figure.</p>
+<p>Boundary conditions are the next challenge. These are usually handled using a characteristic equation approach (unless the boundaries are really simple).  For the time being we will use pretty simple boundary conditions, and complicate as necessary.</p>
+<p><img alt="" src="../space-time-map.jpg" /> </p>
+<table>
+<thead>
+<tr>
+<th align="left">Figure 5. Relation of the linked reaches to solution of the equations in the XT-plane. Explicit updating (as used herein) uses the three values at the known time level to project (update) the unknown value at the next time level. Boundary behavior is a separate calculation, dependent on the evolution of the interior solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example-1-steady-flow-over-a-weir">Example 1: Steady Flow over a Weir</h2>
+<p>The backwater curve situation for a rectangular channel with discharge over a weir is repeated.<br />
+The channel width is 5 meters, bottom slope <script type="math/tex">0.001</script>, Manning's <script type="math/tex">n=0.02</script> and discharge <script type="math/tex">Q=55.4 \frac{m^3}{sec}</script>.
+We will start with the flow depth artificially large and observe that the transient solver will eventually produce an <em>equilibrium</em> solution that is more or less the same as the steady-flow solver.  </p>
+<p>Generally such a simulation is a good idea to test a new algorithm -- it should be stable enough to converge to and maintain a steady solution.</p>
+<p>A script that implements these concepts is the subject of our next workshop, as before we will also perform the computations in SWMM.</p>
+<hr />
+<h2 id="references">References</h2>
+<p>Koutitas, C. G. 1983. Elements of Computational Hydraulics. ISBN 0-412-00361-9. Pentech Press Ltd. London. (Chapter 4) <a href="http://54.243.252.9/ce-5362-psuedo-course/3-Readings/PracticalComputationalHydraulics-Kousitas/ElementsOfComputationalHydraulics.pdf">http://54.243.252.9/ce-5362-psuedo-course/3-Readings/PracticalComputationalHydraulics-Kousitas/ElementsOfComputationalHydraulics.pdf</a></p>
+<p>Roberson, J. A., Cassidy, J.J., and Chaudry, M. H., (1988) Hydraulic Engineering, Houghton Mifflin Co (Chapter 10) <a href="http://54.243.252.9/ce-5362-psuedo-course/3-Readings/HydraulicEngineering/">http://54.243.252.9/ce-5362-psuedo-course/3-Readings/HydraulicEngineering/</a></p>
+<p>Sturm T.W (2001) Open Channel Hydraulics, 1ed., McGraw-Hill, New York. Note: This PDF is from an international edition published in Singapore. <a href="http://54.243.252.9/ce-5362-psuedo-course/3-Readings/OpenChannelHYdraulics/">http://54.243.252.9/ce-5362-psuedo-course/3-Readings/OpenChannelHYdraulics/</a></p>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
