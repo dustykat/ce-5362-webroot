@@ -11,6 +11,7 @@ nav:
           - Part 2 St. Venant Equations: lesson2/ce5362-swmodeling-lesson-2.2.md
       - Lesson 5 GVF Variable Step-Backwater: lesson5/ce5362-swmodeling-lesson-5.md
       - Lesson 6 GVF Fixed Step-Backwater: lesson6/ce5362-swmodeling-lesson-6.md
+      - Lesson 7 Unsteady Lax-Scheme: lesson7/ce5362-swmodeling-lesson-7.md
           
   - Readings: untitled.md
   - Homework: 
