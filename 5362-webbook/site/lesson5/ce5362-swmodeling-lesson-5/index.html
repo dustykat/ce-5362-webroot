@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Lesson 5 GVF Variable Step-Backwater - Surface Water Modeling</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Surface Water Modeling</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../ce5362-swmodeling-lesson-1/">Lesson 1 Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 2 Modeling Philosophy</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../lesson2/ce5362-swmodeling-lesson-2.1/">Part 1 Modeling</a>
+</li>
+            
+<li >
+    <a href="../../lesson2/ce5362-swmodeling-lesson-2.2/">Part 2 St. Venant Equations</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li class="active">
+    <a href="./">Lesson 5 GVF Variable Step-Backwater</a>
+</li>
+                                    
+<li >
+    <a href="../../lesson6/ce5362-swmodeling-lesson-6/">Lesson 6 GVF Fixed Step-Backwater</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../untitled/">Readings</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homework <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 1 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 2 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 3 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 4 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 5 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 6 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 7 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 8 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 9 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 10 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 11 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 12 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 13 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 14 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Exams <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Exam 1 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Exam 1 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Exam 2 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Exam 2 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 3</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Exam 3 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Exam 3 Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../lesson2/ce5362-swmodeling-lesson-2.2/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../lesson6/ce5362-swmodeling-lesson-6/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#ce-5362-lesson-5-computational-workshop">CE 5362 Lesson 5 Computational Workshop</a></li>
+            <li><a href="#steady-uniform-normal-flow">Steady Uniform (Normal) Flow</a></li>
+            <li><a href="#swmm">SWMM</a></li>
+            <li><a href="#gradually-varied-steady-flow">Gradually Varied Steady Flow</a></li>
+            <li><a href="#scripting-an-algorithm">Scripting an Algorithm</a></li>
+            <li><a href="#describe-the-actual-bw-computes">Describe the actual BW computes</a></li>
+            <li><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="ce-5362-lesson-5-computational-workshop">CE 5362 Lesson 5 Computational Workshop</h1>
+<p>This computational workshop is to examine computation related to:</p>
+<ol>
+<li>
+<p>Uniform flow; algebraic equation.
+<script type="math/tex; mode=display"> S_f = S_0 </script>
+</p>
+</li>
+<li>
+<p>Gradually varied; ordinary differential equation.
+<script type="math/tex; mode=display"> S_f = S_0 - \frac{\partial z}{\partial x} - \frac{V}{g}\frac{\partial V}{\partial x} </script>
+</p>
+</li>
+<li>
+<p>Dynamic flow (shallow wave) conditions; partial differential equation.</p>
+</li>
+</ol>
+<p>
+<script type="math/tex; mode=display"> S_f = S_0 - \frac{1}{g} \frac{\partial V}{\partial t} - \frac{\partial z}{\partial x} - \frac{V}{g}\frac{\partial V}{\partial x} </script>
+</p>
+<p>The objectives are to explore the JupyterLab environment to make relevant computations, then compare results to the professional tools (SWMM)</p>
+<h2 id="steady-uniform-normal-flow">Steady Uniform (Normal) Flow</h2>
+<p>Uniform flow is defined as the situation where friction slope and channel slope are the same. In this kind of 
+flow the profile grade line (channel bottom), the hydraulic grade line (water surface), and the energy grade line are all
+parallel:</p>
+<p>
+<script type="math/tex; mode=display"> S_f = \frac{\Delta h}{\Delta x} = S_0 </script>
+</p>
+<p>One can apply the Darcy-Weisbach head loss model (adapted for non-circular conduits, using correlations for the friction factor):</p>
+<p>
+<script type="math/tex; mode=display">h_L = f\frac{L}{4R_h}\frac{V^2}{2g}</script>
+</p>
+<p>or more commonly the Chezy-Manning head loss model:</p>
+<p>
+<script type="math/tex; mode=display">h_L = L (\frac{n V}{1.0 \times R_h^{2/3}})^2</script>
+</p>
+<h3 id="typical-calculations">Typical Calculations</h3>
+<p>Uniform flow type computations will usually deal with flow depth in a given geometry for a given discharge, possibly from a hydrologic response model integrated into the process.</p>
+<p>Using that as the structure, lets build a simple, extensible model tool that predicts flow depth in a rectangular channel, and then computes node depths at the channel ends - we will then connect two channels in series (as we might in SWMM) and compute the predicted water surface elevation.</p>
+<p>First lets define some useful functions </p>
+<pre><code class="python"># Hydraulic Functions
+# Depth-Area function for rectangular channel
+def area(depth,width):
+    area=depth*width;
+    return(area)
+</code></pre>
+
+<pre><code class="python"># Depth-Wetted perimeter function for rectangular channel
+def perimeter(depth,width):
+    perimeter=2*depth+width;
+    return(perimeter)
+</code></pre>
+
+<pre><code class="python"># Hydraulic radius function
+def radius(area,perimeter):
+    radius=area/perimeter;
+    return(radius)
+</code></pre>
+
+<pre><code class="python"># Topographic slope function
+def slope0(xup,zup,xdown,zdown):
+    slope0=-1.0*(zdown-zup)/(xdown-xup)
+    return(slope0)
+</code></pre>
+
+<pre><code class="python"># Manning's equation SI units
+def qnorm(mannings_n,area,radius,slope):
+    qnorm=(1.0/mannings_n)*area*(radius**(2./3.))*(slope**(1./2.))
+    return(qnorm)
+</code></pre>
+
+<p>Here is how we might proceede, lets make up a function and check it</p>
+<pre><code class="python">width = 5.0
+qdesign = 10.0
+mannn = 0.02
+z1 = 100.0
+z2 =  99.0
+x1 = 0.0
+x2 = 100.0
+
+toposlope = slope0(x1,z1,x2,z2)
+dguess = 0.63148039217297
+qguess = qnorm(mannn,area(dguess,width),radius(area(dguess,width),perimeter(dguess,width)),toposlope)
+print('qdesign = ',qdesign,'qguess = ',qguess)
+</code></pre>
+
+<pre><code>qdesign =  10.0 qguess =  10.0
+</code></pre>
+<p>Now we will want to automate the process somewhat, here we use a quasi-Newton method as described at (http://54.243.252.9/engr-1330-psuedo-course/MyJupyterNotebooks/10-NewtonsMethod/NewtonsMethod.html)</p>
+<pre><code class="python"># Define the function
+def func(dguess):
+    global x1,x2,z1,z2,mann,qdesign
+    qguess = qnorm(mannn,area(dguess,width),radius(area(dguess,width),perimeter(dguess,width)),slope0(x1,z1,x2,z2))
+    func = qdesign - qguess
+    return func
+def dfdx(x):
+    dfdx = (func(x + 1e-06) - func(x) )/ (1e-06)
+    return (dfdx)
+
+HowMany = 9
+HowSmall = 1e-06
+xnow = 0.5
+# now we begin the process
+count = 0
+for i in range(0,HowMany,1):
+    xnew = xnow - func(xnow)/dfdx(xnow)
+# stopping criteria -- update not changing
+    if abs(xnew - xnow) &lt; HowSmall:
+        print (&quot;Update not changing \n&quot;)
+        print(&quot;Function value =&quot;,func(xnew))
+        print(&quot; Root value    =&quot;,xnew)
+        break
+    else:
+        xnow = xnew
+        count = count +1
+        continue
+# stopping criteria -- function close to zero
+    if abs( func(xnew) ) &lt; HowSmall:
+        print (&quot;Function value close to zero \n&quot;)
+        print(&quot;Function value =&quot;,func(xnew))
+        print(&quot; Root value    =&quot;,xnew)
+        break
+    else:
+        xnow = xnew
+        count = count +1
+        continue
+# next step, then have either broken from the loop or iteration counted out
+if count == HowMany:
+    print(&quot; Iteration Limit Reached &quot;)
+    print(&quot;Function value =&quot;,func(xnew))
+    print(&quot; Root value    =&quot;,xnew)
+print(&quot;End of NewtonMethod.py &quot;)
+</code></pre>
+
+<pre><code>Update not changing
+
+Function value = 0.0
+ Root value    = 0.63148039217297
+End of NewtonMethod.py
+</code></pre>
+<p>Now we can tidy up the code a bit to handle an example case of 3 nodes, connected by two links.</p>
+<p>First lets convert the script to report specific output</p>
+<pre><code class="python"># Define the function
+def func(dguess):
+    global x1,x2,z1,z2,mann,qdesign
+    qguess = qnorm(mannn,area(dguess,width),radius(area(dguess,width),perimeter(dguess,width)),slope0(x1,z1,x2,z2))
+    func = qdesign - qguess
+    return func
+def dfdx(x):
+    dfdx = (func(x + 1e-06) - func(x) )/ (1e-06)
+    return (dfdx)
+
+def GetDepth(xnow):
+    HowMany = 9
+    HowSmall = 1e-06
+    #xnow = 0.5 #pass as argument
+    # now we begin the process
+    count = 0
+    for i in range(0,HowMany,1):
+        xnew = xnow - func(xnow)/dfdx(xnow)
+    # stopping criteria -- update not changing
+        if abs(xnew - xnow) &lt; HowSmall:
+            print (&quot;Update not changing \n&quot;)
+            print(&quot;Function value =&quot;,func(xnew))
+            print(&quot; Root value    =&quot;,xnew)
+            break
+        else:
+            xnow = xnew
+            count = count +1
+            continue
+    # stopping criteria -- function close to zero
+        if abs( func(xnew) ) &lt; HowSmall:
+            print (&quot;Function value close to zero \n&quot;)
+            print(&quot;Function value =&quot;,func(xnew))
+            print(&quot; Root value    =&quot;,xnew)
+            break
+        else:
+            xnow = xnew
+            count = count +1
+            continue
+# next step, then have either broken from the loop or iteration counted out
+    if count == HowMany:
+        print(&quot; Iteration Limit Reached &quot;)
+        print(&quot;Function value =&quot;,func(xnew))
+        print(&quot; Root value    =&quot;,xnew)
+    print(&quot;End of NewtonMethod.py &quot;)
+    return(xnew)
+</code></pre>
+
+<pre><code class="python">GetDepth(0.5)
+</code></pre>
+
+<pre><code>Update not changing
+
+Function value = 0.0
+ Root value    = 0.63148039217297
+End of NewtonMethod.py
+
+
+
+
+
+0.63148039217297
+</code></pre>
+<pre><code class="python"># Our world
+location = [0,100,200]
+elevation = [100,99,96] # bottom elevation nodes 0,1,2 - notice intended change in slope
+depth = []
+head = []
+mannn = 0.02 # mannings N all sections
+qdesign = 10.0 # upstream input flow 
+
+# solve the first reach
+z1 = elevation[0]
+z2 =  elevation[1]
+x1 = location[0]
+x2 = location[1]
+depth.append(GetDepth(0.5))
+
+# solve the second reach
+z1 = elevation[1]
+z2 =  elevation[2]
+x1 = location[1]
+x2 = location[2]
+depth.append(GetDepth(0.5))
+
+# compute head in nodes (this is tricky at the slope change, probably use average head)
+head.append(elevation[0]+0.5*(depth[0]+depth[0]))
+head.append(elevation[1]+0.5*(depth[0]+depth[1]))
+head.append(elevation[2]+0.5*(depth[1]+depth[1]))
+
+print('')
+
+for irow in range(0,3):
+    print('Node ',irow,' Elevation ',elevation[irow],' Water Surface Elevation ',head[irow])
+
+
+</code></pre>
+
+<pre><code>Update not changing
+
+Function value = 0.0
+ Root value    = 0.63148039217297
+End of NewtonMethod.py 
+Update not changing
+
+Function value = -1.7763568394002505e-15
+ Root value    = 0.44303906911056373
+End of NewtonMethod.py
+
+Node  0  Elevation  100  Water Surface Elevation  100.63148039217297
+Node  1  Elevation  99  Water Surface Elevation  99.53725973064176
+Node  2  Elevation  96  Water Surface Elevation  96.44303906911057
+</code></pre>
+<p>Now lets plot the situation</p>
+<pre><code class="python"># Now plotting
+def plotAline(list1,list2,list3,list4,strx,stry,strtitle): # plot list1 on x, list2 on y, xlabel, ylabel, title
+    from matplotlib import pyplot as plt # import the plotting library from matplotlibplt.show()
+    plt.plot( list1, list2, color ='brown', marker ='', linestyle ='solid') # create a line chart, years on x-axis, gdp on y-axis
+    plt.plot( list3, list4, color ='blue', marker ='', linestyle ='solid') # create a line chart, years on x-axis, gdp on y-axis
+    plt.title(strtitle)# add a title
+    plt.ylabel(stry)# add a label to the x and y-axes
+    plt.xlabel(strx)
+    plt.show() # display the plot
+    return #null return
+
+plotAline(location,elevation,location,head,'Distance','Elevation','Water Surface Profile - Normal Depth in Each Channel')
+</code></pre>
+
+<p><img alt="png" src="../output_16_0.png" /></p>
+<h2 id="swmm">SWMM</h2>
+<p>Now we will do the same simulation in SWMM - we will find it is a lot easier to set-up and run.</p>
+<hr />
+<h2 id="gradually-varied-steady-flow">Gradually Varied Steady Flow</h2>
+<h3 id="fixed-depth-change-variable-spatial-step">Fixed Depth Change, Variable Spatial Step</h3>
+<p>The fixed-step refers to specified changes in depth for which we solve to find the variable spatial steps. The method is a very simple method for computing water surface profiles in prismatic channels. A prismatic channel is a channel of uniform cross sectional geometry with constant bed (topographic) slope.</p>
+<p>In such channels with smooth (non-jump) steady flow the continunity and momentum equations are: </p>
+<p>
+<script type="math/tex; mode=display">Q = AV </script>
+</p>
+<p>where where <script type="math/tex">Q</script> is volumetric discharge, <script type="math/tex">A</script> is cross sectional flow area, and <script type="math/tex">V</script> is the mean section velocity; and: </p>
+<p>
+<script type="math/tex; mode=display">\frac{V}{g} \frac{dV}{dx}+\frac{dh}{dx} = S_o - S_f</script>
+</p>
+<p>where <script type="math/tex">h</script> is the flow depth (above the bottom), and <script type="math/tex">x</script> is horizontal the distance along the channel.</p>
+<p>For the variable step method, the momentum equation is rewritten as a difference equation (after application of calculus to gather terms) then rearranged to solve for the spatial step dimension .</p>
+<p>
+<script type="math/tex; mode=display"> \frac{\frac{V^2_{i+1}}{2g}-\frac{V^2_{i}}{2g}}{\Delta x} + \frac{h_{i+1}-h_{i}}{\Delta x} = S_o - \bar{S_f} </script>
+</p>
+<p>where <script type="math/tex">S_f</script> is the average slope of the energy grade line between two sections (along a
+reach of length <script type="math/tex">\Delta x</script>, the unknown value). Rearrangement to isolate <script type="math/tex">\Delta x</script> produces an explicit update equation that can be evaluated to find the different values of <script type="math/tex">\Delta x</script> associated with different flow depths. The
+plot of the accumulated spatial changes versus the sum of the flow depth and bottom elevation is the water surface profile.</p>
+<p>
+<script type="math/tex; mode=display">\frac{(h_{i+1} + \frac{V^2_{i+1}}{2g})  -  (h_{i} +\frac{V^2_{i}}{2g}) }{S_o - \bar{S_f} } = \Delta x </script>
+</p>
+<p>The distance between two sections with known discharges is computed using the
+equation, all the terms on the left hand side are known values. The mean energy
+gradient (<script type="math/tex">\bar{S_f}</script> ) is computed from the mean of the velocity, depth, area, and hydraulic
+radius for the two sections.</p>
+<p>The friction slope can be computed using Manning's, Chezy, or the Darcy-Weisbach friction equations adapted for non-circular, free-surface conduits.</p>
+<p>The equation here is written moving upstream, direction matters for indexing. Thus position <script type="math/tex">i+1</script>
+is assumed upstream of position <script type="math/tex">i</script> in this notebook. Such directional convention is unusual in
+numerical methods and analysts need to use care when developing their own tools or using other
+tools. A clever analyst need not rewrite code, but simple interchange of upstream and downstream
+depths can handle both backwater and front-water curves.</p>
+<h2 id="scripting-an-algorithm">Scripting an Algorithm</h2>
+<p>Here the method is illustrated in  to illustrate the tool as a programming environment.
+First we build a set of utility functions, these will be used later in the <code>backwater</code>
+function</p>
+<p>The listings below are utility functions for rectangular channels for flow area given channel
+depth and width and wetted perimeter given depth and width. Different geometries will need different functions (probably by numerical methods rather than actual functional relationships).</p>
+<p>The first listing is a depth-area function for rectangular geometry.</p>
+<pre><code class="python"># Depth-Area function for rectangular channel
+def area(depth,width):
+    area=depth*width;
+    return(area)
+</code></pre>
+
+<p>The next listing is a depth wetted-perimeter function for a rectangular geometry.</p>
+<pre><code class="python"># Depth-Wetted perimeter function for rectangular channel
+def perimeter(depth,width):
+    perimeter=2*depth+width;
+    return(perimeter)
+</code></pre>
+
+<p>Listing below is a listing of the code for the hydraulic radius (ratio of the above results),
+this is a generic function, it does not need to know the flow geometry</p>
+<pre><code class="python"># Hydraulic radius function
+def radius(area,perimeter):
+    radius=area/perimeter;
+    return(radius)
+</code></pre>
+
+<p>The next section is a listing of code for the friction slope given Manning's n, discharge,
+hydraulic radius, and flow area. This function implicitly assumes SI units
+(the 1.49 constant in U.S. Customary units is not present). For U.S. Customary units
+either add the constant or convert the US units into equivalent SI units.</p>
+<pre><code class="python"># Friction slope function
+def slope_f(discharge,mannings_n,area,radius):
+    slope_f=(discharge**2)*(mannings_n**2)/( (radius**(4./3))*(area**2) ); #compute friction slope
+    return(slope_f)
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
+
+<pre><code class="python"># 2-point average
+def avg2point(x1,x2):
+    avg2point=0.5*(x1+x2);
+    return(avg2point)
+</code></pre>
+
+<p>The semi-colons in the functions are probably unnecessary, but have value because it
+forces the expression to its left to be evaluated and helps prevent ambiguous code.
+Also notice the use of indention as a scope delimiter, the delimiter is required. </p>
+<h2 id="describe-the-actual-bw-computes">Describe the actual BW computes</h2>
+<p>At this point, we have 5 useful, testable functions (and we should test before
+the next step.</p>
+<p>The next listing is the step-backwater method implemented as a function. This function
+computes the space steps, changes in depth, etc. as per the algorithm. The function illustrates count
+controlled repetition (for loops), list indexing, and use of the utility functions to
+make the code readable as well as ensure that the parts work before the whole program
+is assembled. This concept is really crucial, if you can build a tool of parts that are
+known to work, it helps keep logic errors contained to known locations.</p>
+<pre><code class="python"># Backwater curve function
+def backwater(begin_depth,end_depth,how_many,discharge,width,mannings_n,slope):
+#
+## Example function call
+##  zz&lt;-backwater(begin_depth=8,end_depth=5,how_many=30,discharge=55.4,width=5,mannings_n=0.02,slope=0.001)
+## Numerical values are values used in essay, they correspond to a particuar example from Koutitas 1983
+#
+# Other functions must exist otherwise will spawn errors
+#
+# Prepare space for vectors
+    twog=2.0*9.8
+    depth=[]  # numeric vector for depths
+    velocity=[]  # numeric vector for velocities
+    deltax=[] # numeric vector for spatial steps
+    distance=[] # space for computing cumulative distances
+    bse=[] # numeric vector for bottom elevations
+    wse=[] # numeric vector for water surface elevations
+    delta_depth=(begin_depth-end_depth)/(how_many)  # change in depth for finding spatial steps
+    #print(delta_depth)
+    depth.append(begin_depth) # assign downstream value
+    for i in range(1,how_many):
+        depth.append(depth[0] - (i+1)*delta_depth) # uniform depths
+    for i in range(0,how_many):
+        velocity.append(discharge/area(depth[i],width))
+    for i in range(0,how_many-1):
+        depth_bar=avg2point(depth[i+1],depth[i]); #compute average depth in reach
+        area_bar=area(depth_bar,width); #compute average area in reach
+        perimeter_bar=perimeter(depth_bar,width); #compute average wetted perimeter
+        radius_bar=radius(area_bar,perimeter_bar); #compute average hydraulic radius
+        friction=slope_f(discharge,mannings_n,area_bar,radius_bar) #compute friction slope
+        snrgup =(depth[i+1]+((velocity[i+1]**2)/twog))
+        snrgdn =(depth[i] + ((velocity[i]**2)/twog))
+        step =(snrgup - snrgdn)/(slope-friction) # compute change in distance for each change in depth
+        deltax.append(step)
+    distance.append(0.0)
+    bse.append(0.0)
+    for i in range(1,how_many):
+        distance.append(distance[i-1]+deltax[i-1]); # spatial distances
+        bse.append(bse[i-1]-deltax[i-1]*slope); # bottom elevations
+    for i in range(0,how_many):
+        wse.append(bse[i]+depth[i]) # water surface elevations
+    return(distance,wse,bse,depth,deltax,velocity)
+</code></pre>
+
+<h3 id="function-call-with-plotting">Function call with plotting</h3>
+<pre><code class="python"># call the function - output is a tuple, use this fact in the plotting build
+output = backwater(begin_depth=8.0,end_depth=5.0,how_many=31,discharge=55.4,width=5.0,mannings_n=0.02,slope=0.001)
+# Now plot the water surface profile
+import matplotlib.pyplot
+myfigure = matplotlib.pyplot.figure(figsize = (16,8)) # generate a object from the figure class, set aspect ratio
+# Built the plot
+matplotlib.pyplot.plot(output[0], output[2],  color ='brown', linewidth=3)
+matplotlib.pyplot.plot(output[0], output[1],  color ='blue', linewidth=5)
+matplotlib.pyplot.ylabel(&quot;Elevation (meters)&quot;)
+matplotlib.pyplot.xlabel(&quot;Distance (meters)&quot;)
+mytitle = &quot;Water Surface Profile - Variable Spatial Step Method&quot;
+matplotlib.pyplot.title(mytitle)
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_34_0.png" /></p>
+<h2 id="references">References</h2>
+<p>Koutitas, C. G. 1983. Elements of Computational Hydraulics. ISBN 0-412-00361-9. Pentech Press Ltd. London. (Chapter 4) <a href="http://54.243.252.9/ce-5362-psuedo-course/3-Readings/PracticalComputationalHydraulics-Kousitas/ElementsOfComputationalHydraulics.pdf">http://54.243.252.9/ce-5362-psuedo-course/3-Readings/PracticalComputationalHydraulics-Kousitas/ElementsOfComputationalHydraulics.pdf</a></p>
+<p>Roberson, J. A., Cassidy, J.J., and Chaudry, M. H., (1988) Hydraulic Engineering, Houghton Mifflin Co (Chapter 10) <a href="http://54.243.252.9/ce-5362-psuedo-course/3-Readings/HydraulicEngineering/">http://54.243.252.9/ce-5362-psuedo-course/3-Readings/HydraulicEngineering/</a></p>
+<p>Sturm T.W (2001) Open Channel Hydraulics, 1ed., McGraw-Hill, New York. Note: This PDF is from an international edition published in Singapore. <a href="http://54.243.252.9/ce-5362-psuedo-course/3-Readings/OpenChannelHYdraulics/">http://54.243.252.9/ce-5362-psuedo-course/3-Readings/OpenChannelHYdraulics/</a></p>
+<p>Cunge, J.A., Holly, F.M., Verwey, A. (1980). Practical Aspects of Computational
+River Hydraulics. Pittman Publishing Inc. , Boston, MA. pp. 7-50</p>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

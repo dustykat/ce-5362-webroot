@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Lesson 1 Introduction - Surface Water Modeling</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Surface Water Modeling</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">Lesson 1 Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 2 Modeling Philosophy</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../lesson2/ce5362-swmodeling-lesson-2.1/">Part 1 Modeling</a>
+</li>
+            
+<li >
+    <a href="../lesson2/ce5362-swmodeling-lesson-2.2/">Part 2 St. Venant Equations</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../lesson5/ce5362-swmodeling-lesson-5/">Lesson 5 GVF Variable Step-Backwater</a>
+</li>
+                                    
+<li >
+    <a href="../lesson6/ce5362-swmodeling-lesson-6/">Lesson 6 GVF Fixed Step-Backwater</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../untitled/">Readings</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homework <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 1 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 2 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 3 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 4 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 5 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 6 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 7 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 8 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 9 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 10 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 11 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 12 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 13 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 14 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Exams <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Exam 1 Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Exam 1 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Exam 2 Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Exam 2 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 3</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Exam 3 Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Exam 3 Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../syllabus/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../lesson2/ce5362-swmodeling-lesson-2.1/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#ce-5362-surface-water-modeling">CE 5362 Surface Water Modeling</a></li>
+            <li><a href="#lesson-1-introduction">Lesson 1: Introduction</a></li>
+            <li><a href="#textbook">Textbook:</a></li>
+            <li><a href="#surface-water-modeling-whats-the-point">Surface Water Modeling - What's the Point?:</a></li>
+            <li><a href="#the-point">The Point</a></li>
+            <li><a href="#what-is-modeling">What is Modeling?</a></li>
+            <li><a href="#lesson-1-workshop">Lesson 1: Workshop</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="ce-5362-surface-water-modeling">CE 5362 Surface Water Modeling</h1>
+<h2 id="lesson-1-introduction">Lesson 1: Introduction</h2>
+<p>These web pages are built using JupyterLab, in most of my pages, there are two special code blocks, the one below to make markup cells properly left-align, and the one at the bottom which identifies the server that last ran the notebook.  You need not understand the script in the cells, just a warning of their presence.</p>
+<pre><code class="python">%%html
+&lt;style&gt;
+  table {margin-left: 0 !important;}
+&lt;/style&gt;
+</code></pre>
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<hr />
+<h3 id="description">Description:</h3>
+<p>The course prepares engineers to practice hydrologic and hydraulic modeling in one-dimensional <strong>unsteady</strong> conditions; and in higher spatial dimensions (2D/3D) using custom-written and professional software tools. Integration of simulation tools to examine complex systems is emphasized.</p>
+<h3 id="syllabus">Syllabus:</h3>
+<p>The syllabus is located at <a href="http://54.243.252.9/ce-5362-psuedo-course/0-Syllabus/ce5362-swmodeling-2021-1.html">http://54.243.252.9/ce-5362-psuedo-course/0-Syllabus/ce5362-swmodeling-2021-1.html</a></p>
+<h3 id="content-servers">Content Server(s):</h3>
+<ul>
+<li>The primary course content server is <a href="http://54.243.252.9/ce-5362-psuedo-course/">http://54.243.252.9/ce-5362-psuedo-course/</a></li>
+<li>The development course content server (used as a backup) is <a href="https://github.com/dustykat/ce-5362-webroot">https://github.com/dustykat/ce-5362-webroot</a></li>
+</ul>
+<h3 id="learning-management-system-lms">Learning Management System (LMS)</h3>
+<ul>
+<li>Blackboard <a href="https://ttu.blackboard.com/webapps/login">https://ttu.blackboard.com/webapps/login</a></li>
+</ul>
+<h3 id="software">Software</h3>
+<ol>
+<li>
+<p>JupyterLab as implemented in Anaconda for custom-written programs</p>
+<ol>
+<li>You can run these on your laptops, or on an AWS Lightsail Instance as you prefer.  </li>
+<li>The instructor runs his examples on either an AWS Lightsail Instance (or sometimes on a Raspberry Pi)</li>
+</ol>
+</li>
+<li>
+<p>SWMM</p>
+<ol>
+<li>You can install and run on your laptops, or on an AWS Lightsail Instance as you prefer.  </li>
+<li>The instructor will run SWMM on an AWS Lightsail Instance </li>
+</ol>
+</li>
+<li>
+<p>EFDC and/or SToRM (to be determined as course progresses)</p>
+<ol>
+<li>These are clock-cycle hogs; you can install and run on your laptops, or on an AWS Lightsail Instance as you prefer. I am going to use an AWS Lightsail Instance </li>
+</ol>
+</li>
+</ol>
+<h2 id="textbook">Textbook:</h2>
+<p>none, but there are readings located at: <a href="http://54.243.252.9/ce-5362-psuedo-course/3-Readings/">http://54.243.252.9/ce-5362-psuedo-course/3-Readings/</a> which will be referenced during the course.</p>
+<hr />
+<h2 id="surface-water-modeling-whats-the-point">Surface Water Modeling - What's the Point?:</h2>
+<p>Consider an excerpt from a recent e-mail:</p>
+<p><strong>Surface Water Hydrologist (Entry-Level), Tampa, FL   21-02-TPA01</strong></p>
+<p>All interested applicants must apply online at <a href="https://www.interacareers.com/jobDesc.asp?JobID=215">https://www.interacareers.com/jobDesc.asp?JobID=215</a></p>
+<p>INTERA is seeking a Surface Water / Groundwater Hydrologist who is skilled using and developing modern flow and transport modeling tools in our Tampa, Florida, office. The candidate should have a BS or MS in engineering that focuses on water resources or a related field. The chosen candidate will conduct <code>data processing</code>, <code>analysis</code>, and <code>visualization</code> to support <code>surface water</code>,<code>groundwater</code>, and <code>integrated modeling</code> projects throughout the state of Florida and will develop hydrologic and hydraulic models under the supervision of a professional engineer. </p>
+<p>This is an excellent opportunity to advance your technical skills and career while collaborating with some of the industry’s top talent. As a company wholly dedicated to providing safe and technically sound solutions that exceed our clients’ expectations, we are looking for self-starters who face all project challenges head-on with expertise and commitment.</p>
+<p>INTERA’s corporate vision is Delivering Excellence with Every Solution, and we invite all interested candidates to apply if you can embody this on both a personal and professional level. </p>
+<p><strong><em>Essential Duties and Responsibilities</em></strong>
+This position requires an interest in the design and calibration of <code>surface water</code>, groundwater, and <code>integrated models</code> and a strong background in programming and geographic information systems (GIS); strong report writing, and communication skills are also essential. The candidate will perform data visualization with large data sets by developing scripts in <code>Python</code> or <code>R</code> and develop spatial plots of data in <code>GIS</code>.  The position will include documentation of all work products in technical reports and presentations.  Additional duties include <code>developing</code> models and alternative <code>simulations</code> under the supervision of a professional engineer. The candidate must be able to work independently and have experience working with other modelers, engineers, and well-educated clients.</p>
+<p><strong><em>Desired Education and Skills</em></strong>
+- BS or MS in Civil/Environmental Engineering with an emphasis on hydrology or a related field
+- Experience analyzing large data sets programmatically using R or Python
+- Experience with Geographic Information System (GIS) programs such as ArcMap
+- Excellent written and verbal communication skills
+- Experience with <code>HSPF</code>, <code>ICPRv4</code>, <code>HEC-RAS</code>, the suite of HEC-RAS tools, and <code>MODFLOW</code> is preferred
+- Programming using R or Python</p>
+<p><strong><em>Required Qualifications</em></strong>
+- Must be able to exercise professional judgement, perform QA/QC on data sets, and examine data with a critical eye
+- Excellent time management skills in organizing, planning, and prioritizing work
+- Must be reliable and conscientious and have the ability to maintain effective and positive work relationships with others, be a cooperative team player and work with a wide variety of people.
+- Excellent verbal and written communication skills are required</p>
+<p><strong><em>About INTERA &amp; Our Benefits</em></strong></p>
+<p>Our employees say that what they value most at INTERA is our corporate culture—because not only do we believe that our people are our most important asset, we embody it. As an employee-owned company, we are invested in not only providing a good work-life balance with flexible schedules and telecommuting opportunities, but we offer generous benefits packages (we even have a 0-dollar cost health plan), bonus eligibilities, tuition reimbursements, and more. These are some of the reasons why many of our employees have spent 10 to 25 years or more at INTERA. We love what we do and it shows.</p>
+<p>So join us today because INTERA has a reputation of excellence, leaves no room for politics, and empowers all of our employees to accomplish their best!</p>
+<h2 id="the-point">The Point</h2>
+<p>There are jobs in the field, so you should have some background in the general topic -- notice the advertisement mentions specific software -- we will use similar software to explore the concepts in these commercial products; its not hard to translate skills - but we have to have them in the first place!</p>
+<p>There is a fair amount of on-line how-to <a href="https://www.epa.gov/waterdata/surface-water-quality-modeling-training">https://www.epa.gov/waterdata/surface-water-quality-modeling-training</a> but this alone just makes you dangerous, here we will try to get an understanding of the complexity of the models, so we can trick them as needed (trick in the good sense; make them work for us!)</p>
+<hr />
+<h2 id="what-is-modeling">What is Modeling?</h2>
+<p>Modeling is the art of representing reality in a simplified form, sufficient to answer questions about that reality</p>
+<h3 id="what-is-a-model">What is a Model?</h3>
+<p>There are many definitions, a few are:</p>
+<ol>
+<li>
+<p>A model is a simplification of reality that duplicates the excitation-response of the real system but is faster, smaller, or more practical to study than the real system.</p>
+</li>
+<li>
+<p>A mathematical model is composed of mathematical expressions quantifying fundamental physical principles (force, energy, mass, etc.). These expressions are adapted and simplified in each case to the special features of the problem to be tackled.</p>
+</li>
+<li>A model is any device that represents an approximation of a field situation.</li>
+</ol>
+<p>There are several categories of models: </p>
+<ol>
+<li>
+<p><strong>Physical models</strong> such as laboratory sand tanks, flumes, pipe networks, porous columns, batch reactors, and pilot plants are used to directly simulate various conditions anticipated in full scale settings. Physical models tend to be the most costly to build from scratch, but many questions cannot be answered without these kind of model</p>
+</li>
+<li>
+<p><strong>Analog models</strong> such as electric circuit analogs or Hele-Shaw analogs are used to indirectly simulate field conditions by direct simulation in a domain analogous to the real setting.  Analog computers are quite rare today, but in the 1960's were a principal tool in modeling and were used in aerospace as well as mundane civil engineering applications. A laboratory mouse used to test medicine doses (usually for lethality) is an example of an analog model for human testing. Bear (1972), Chapter 11 provides an excellent background on analog models. The treatment is mostly aimed at porous medium flow, but the concepts are generic. The book has some nice photographs of electric-analog computers (which are rare today).</p>
+</li>
+<li>
+<p><strong>Mathematical models</strong> indirectly simulate field conditions by solution of a governing equation thought to represent the system, along with auxiliary equations that describe the boundary and forcing conditions. These physics and chemical relationships are represented as sets of algebraic equations. Conversion from physics to the computer is via finite-difference, finite-element, finite-volume analysis. Particle tracking is an alternate approach. Mathematical models are solved analytically or numerically -- both solutions may require a computer.</p>
+<ul>
+<li>The set of commands used to solve a mathematical problem on a computer is the program or code. </li>
+<li>The code is generic, whereas a model is comprised of boundary and initial conditions, a computational grid, material properties on that grid, and forcing terms. </li>
+<li>Thus a model is <strong>both</strong> the data and code, whereas the code alone is just a tool waiting for use.</li>
+</ul>
+</li>
+</ol>
+<p>Another kind of model is a statistical (or data model) model that relates observations to excitations without necessarily attempting to relate underlying physics of the problem (Machine Learning; Neural Networks, Regression Trees, Support Vector Machines are these kind of models). </p>
+<p>All the kinds of models are useful and appropriate tools in their various applications.</p>
+<hr />
+<h2 id="lesson-1-workshop">Lesson 1: Workshop</h2>
+<p>Getting us into a common computing environment:</p>
+<p>I am going to use <strong>Amazon Web Services</strong> Lightsail (Virtual Private Server) Instances: They are low cost (~24 USD/month or less) compute servers for running models on a remote AWS maintained machine.   You can try AWS yourself, or do everything on a laptop.  If it's a Apple Macintosh you might have a better experience with AWS.</p>
+<h3 id="install-a-remote-desktop-protocol-client">Install a Remote Desktop Protocol Client</h3>
+<p>You will use a Windows Server environment on your AWS instance.  You need a RDP client to connect to the server and get a GUI. If you have Windows RDP is built-in, if you are a Mac or Linux user you will need to obtain a useable client. The workshop will demonstrate using a Macintosh, then using a Raspberry Pi running Ubuntu Linux to demonstrate the procedure.</p>
+<h3 id="build-an-aws-lightsail-instanceinstall-anaconda">Build an AWS Lightsail Instance/Install Anaconda</h3>
+<p>I already made a video on this part, so I will just play it <a href="https://www.youtube.com/watch?v=s8CJKq2Rvgg&amp;feature=youtu.be">https://www.youtube.com/watch?v=s8CJKq2Rvgg&amp;feature=youtu.be</a></p>
+<h3 id="install-swmm">Install SWMM</h3>
+<p>I will do this live, so I have a current copy (also to see if it works on AWS as expected).</p>
+<hr />
+<p>The other special script block is below!</p>
+<pre><code class="python"># Script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+# Script block to left align Markdown Tables
+</code></pre>
+
+<pre><code>atomickitty.aws
+antares
+/opt/jupyterhub/bin/python3
+3.6.9 (default, Oct  8 2020, 12:12:24) 
+[GCC 8.4.0]
+sys.version_info(major=3, minor=6, micro=9, releaselevel='final', serial=0)
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../mathjaxhelper.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
