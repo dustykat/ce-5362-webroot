@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Part 2 St. Venant Equations - Surface Water Modeling</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Surface Water Modeling</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../ce5362-swmodeling-lesson-1/">Lesson 1 Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 2 Modeling Philosophy</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../ce5362-swmodeling-lesson-2.1/">Part 1 Modeling</a>
+</li>
+            
+<li class="active">
+    <a href="./">Part 2 St. Venant Equations</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../lesson5/ce5362-swmodeling-lesson-5/">Lesson 5 GVF Variable Step-Backwater</a>
+</li>
+                                    
+<li >
+    <a href="../../lesson6/ce5362-swmodeling-lesson-6/">Lesson 6 GVF Fixed Step-Backwater</a>
+</li>
+                                    
+<li >
+    <a href="../../lesson7/ce5362-swmodeling-lesson-7/">Lesson 7 Unsteady Lax-Scheme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../untitled/">Readings</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homework <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 1 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 2 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 3 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 4 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 5 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 6 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 7 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 8 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 9 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 10 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 11 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 12 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 13 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 14 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Exams <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Exam 1 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Exam 1 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Exam 2 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Exam 2 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 3</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../untitled/">Exam 3 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../untitled/">Exam 3 Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../ce5362-swmodeling-lesson-2.1/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../lesson5/ce5362-swmodeling-lesson-5/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#ce-5362-lesson-2-hydraulics-review">CE 5362 Lesson 2 Hydraulics Review</a></li>
+            <li><a href="#st-venant-equations">St. Venant Equations</a></li>
+            <li><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="ce-5362-lesson-2-hydraulics-review">CE 5362 Lesson 2 Hydraulics Review</h1>
+<ul>
+<li>Open Channel Hydraulics (A Review)<ul>
+<li>1D Spatial: St. Venant Equations </li>
+<li>Gradually Varied Flow</li>
+<li>Water Surface Profiles by Variable Step</li>
+<li>Water Surface Profiles by Fixed Step</li>
+</ul>
+</li>
+</ul>
+<h2 id="st-venant-equations">St. Venant Equations</h2>
+<p>In general, 1-D unsteady flow would be considered state-of-practice computation; every engineer would be expected to be able to make such calculations (using professional software). 2-D computation is becoming routine using general purpose software. 3-D computation as of this writing (circa 2009) is still in the realm of state-of-art, and may not be within the capability a typical consulting firm.</p>
+<p>The conservation of mass, momentum, and energy in the context of the cell balance method is used herein to develop the mathematical and computational structure. The cell balance is a computational structure that is somewhat analogous to the Reynolds transport theorem, except the end results are difference equations that can be updates to approximate physical processes. </p>
+<p>The philosophy is a hybrid approach - instead of developing the differential equations first, then numerical approximations, the numerical constructs are built directly and the limiting process is employed to demonstrate that the constructs indeed mimic the differential equations that describe our current understanding of the physics.</p>
+<h3 id="the-computational-cell">The Computational Cell</h3>
+<p>The cell balance method envisions the world as representable by a computational cell (or more typically a collection of cells) with some finite dimension, fixed in space about a cell centroid. Some dimensions are changeable - such as depth.</p>
+<p>The fundamental computational element is a computational cell or a reach. Some professional software, in particular HEC-RAS, considers a reach to be a specific portion of a river system that may be comprised of several computational sub-reaches (cells). The engineer will need to consider the context and the tool used to decide which way to describe their problem to the program (and to the client).</p>
+<p>Figure 1 is a sketch of a portion of a channel. The left-most section is uphill (and upstream)
+of the right-most section. The section geometry is arbitrary, but is drawn to look like
+a channel cross section.</p>
+<p><img alt="" src="../reach_sketch.png" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Figure 1 Reach/Computational Cell</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The length of the reach (distance between each section along the flow path) is <script type="math/tex">\Delta x</script>.
+The depth of liquid in the section is <script type="math/tex">z</script>, the width at the free surface is <script type="math/tex">B(z)</script>, the functional relationship established by the channel geometry. The flow into the reach
+on the upstream face is <script type="math/tex">Q -\frac{\partial Q}{\partial x}\frac{\Delta x}{2}</script> The flow out of the reach on the downstream face
+<script type="math/tex">Q +\frac{\partial Q}{\partial x}\frac{\Delta x}{2}</script>. The direction is strictly a sign convention and the development does not require flow in a single direction. The topographic slope is <script type="math/tex">S_0</script>, assumed relatively constant in each reach, but can vary between reaches.</p>
+<p>The development of the unsteady flow equations herein uses several assumptions:
+1. The pressure distribution at any section is hydrostatic ; this assumption allows computation of pressure force as a function of depth.
+2. Wavelengths are long relative to flow depth; use the shallow wave theory.
+3. Channel slopes are small enough so that the topographic slope is roughly equal to the tangent of the angle formed by the channel bottom and the horizontal.
+4. The flow is one-dimensional ; this assumption implies that longitudinal dimension is large relative to cross sectional dimension. Generally river flows will meet this assumption, it fails in estuaries where the spatial dimensions (length and width) are roughly equal. Thus rivers that are hundreds of feet wide imply that reaches are miles long. If this assumption cannot be met, then 2-D methods are more appropriate.'
+5. Friction is modeled by Chezy-Manning type empirical models. The particular friction model does not really matter, but historically these equations have used the friction slope concept as computed from one of these empirical models.</p>
+<p>The tools that are used to build the equations are conservation of mass and linear
+momentum.</p>
+<h3 id="conservation-of-mass">Conservation of Mass</h3>
+<p>The conservation of mass in the cell is the statement that mass entering and leaving
+the cell is balanced by the accumulation or lass of mass within the cell. For pedagog-
+ical clarity, this section goes through each part of a mass balance then assembles into
+a difference equation of interest.</p>
+<p><strong>Mass Entering</strong>: Mass enters from the left of the cell in our sketch. This direction only establishes a direction convention and negative flux means the arrow points in the direction opposite of that in the sketch. In the notation of the sketch mass entering in a short time interval is:</p>
+<p>
+<script type="math/tex; mode=display"> \dot M_{in} = \rho \cdot (Q -\frac{\partial Q}{\partial x}\frac{\Delta x}{2}) \cdot \Delta t</script>
+</p>
+<p><strong>Mass Exiting</strong>: Mass leaves from the right of the cell in our sketch. In the notation
+of the sketch mass leaving is:</p>
+<p>
+<script type="math/tex; mode=display"> \dot M_{in} = \rho \cdot (Q +\frac{\partial Q}{\partial x}\frac{\Delta x}{2}) \cdot \Delta t</script>
+</p>
+<p><strong>Mass Accumulating</strong>: Mass accumulating within the reach is stored in the prism depicted in the sketch by the dashed lines. The product of density and prism volume is the mass added to (or removed from) storage.</p>
+<p>The rise in water surface in a short time interval is <script type="math/tex">\frac{\partial z}{\partial t} \cdot \Delta t</script> The plan view area of the prism is <script type="math/tex">B(z) \cdot \Delta x</script>. The product of these two terms is the mass added to storage, expressed as:</p>
+<p>
+<script type="math/tex; mode=display"> \dot M_{storage} = \rho \cdot (\frac{\partial z}{\partial t} \cdot \Delta t) \cdot B(z) \cdot \Delta x</script>
+</p>
+<p>Equating the accumulation to the net inflow produces</p>
+<p>
+<script type="math/tex; mode=display">\rho \cdot (\frac{\partial z}{\partial t} \cdot \Delta t) \cdot B(z) \cdot \Delta x = \rho \cdot (Q -\frac{\partial Q}{\partial x}\frac{\Delta x}{2}) \cdot \Delta t - \rho \cdot (Q +\frac{\partial Q}{\partial x}\frac{\Delta x}{2}) \cdot \Delta t</script>
+</p>
+<p>This is the mass balance equation for the reach. If the flow is isothermal, and essentially incompressible then the density is a constant and can be removed from both sides of the equation. </p>
+<p>
+<script type="math/tex; mode=display">(\frac{\partial z}{\partial t} \cdot \Delta t) \cdot B(z) \cdot \Delta x =   (Q -\frac{\partial Q}{\partial x}\frac{\Delta x}{2}) \cdot \Delta t -  (Q +\frac{\partial Q}{\partial x}\frac{\Delta x}{2}) \cdot \Delta t</script>
+</p>
+<p>Remove the <script type="math/tex">+Q</script> and <script type="math/tex">-Q</script> and simplify the right hand side</p>
+<p>
+<script type="math/tex; mode=display">(\frac{\partial z}{\partial t} \cdot \Delta t) \cdot B(z) \cdot \Delta x =  - (\frac{\partial Q}{\partial x}\frac{\Delta x}{2}) \cdot \Delta t -  (\frac{\partial Q}{\partial x}\frac{\Delta x}{2}) \cdot \Delta t = - \frac{\partial Q}{\partial x} \cdot {\Delta x} \cdot \Delta t</script>
+</p>
+<p>Dividing both sides by <script type="math/tex">\Delta x \cdot \Delta t</script> yields</p>
+<p>
+<script type="math/tex; mode=display">(\frac{\partial z}{\partial t} ) \cdot B(z)  =  - \frac{\partial Q}{\partial x}  </script>
+</p>
+<p>This equation is the conventional representation of the conservation of mass in 1-D
+open channel flow. If the equation includes lateral inflow the equation is adjusted to
+include this additional mass term. The usual lateral in flow is treated as a discharge
+per unit length added into the mass balance as expressed as:</p>
+<p>
+<script type="math/tex; mode=display">(\frac{\partial z}{\partial t} ) \cdot B(z) + \frac{\partial Q}{\partial x}  = q</script>
+</p>
+<p>This last equation is one of the two equations that comprise the St. Venant equations.
+The other equation is developed from the conservation of linear momentum.</p>
+<h3 id="conservation-of-momentum">Conservation of Momentum</h3>
+<p>The conservation of momentum is the statement of the change in momentum in the
+reach is equal to the net momentum entering the reach plus the sum of the forces on
+the water in the reach. As in the mass balance, each component will be considered
+separately for pedagogical clarity.</p>
+<p>Figure 2 is a sketch of the reach element under consideration, on some non-zero sloped
+surface.</p>
+<p><img alt="" src="../motion_sketch1.png" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Figure 2 Equation of Motion Sketch</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Momentum Entering</strong>: Momentum entering on the left side of the sketch is:</p>
+<p>
+<script type="math/tex; mode=display"> \rho \cdot QV = \rho \cdot V^2A </script>
+</p>
+<p><strong>Momentum Exiting</strong>: Momentum leaving on the right side of the sketch is:</p>
+<p>
+<script type="math/tex; mode=display"> \rho \cdot QV + \frac{\partial}{\partial x}(\rho \cdot QV)\delta x = \rho \cdot V^2A + \frac{\partial}{\partial x}(\rho \cdot V^2A)\delta x</script>
+</p>
+<p><strong>Momentum Accumulating</strong>: The momentum accumulating is the rate of change of
+<code>linear</code> momentum:</p>
+<p>
+<script type="math/tex; mode=display"> \frac{dL}{dt} = \frac{d(mV)}{dt} = \frac{\partial}{\partial t} (\rho \cdot AV \cdot \delta x)=\rho \cdot \delta x \cdot \frac{\partial}{\partial t} (AV) </script>
+</p>
+<p><strong>Gravity Force</strong>: The gravitational force on the element is the product of the mass in
+the element and the downslope component of acceleration.  The mass in the element is <script type="math/tex">\rho A \delta x</script> The x-component of acceleration is <script type="math/tex">g sin(\alpha)</script>, which is <script type="math/tex">\approx S_0</script> for small values of
+<script type="math/tex"> \alpha</script>.  The resulting force of gravity is is the product of these two values:</p>
+<p>
+<script type="math/tex; mode=display">F_g = \rho g AS_0 \delta x</script>
+</p>
+<p><strong>Friction Force</strong>: Friction force is the product of the shear stress and the contact area.
+In the reach the contact area is the product of the reach length and average wetted
+perimeter.</p>
+<p>
+<script type="math/tex; mode=display">F_{f} = \tau P_w \delta x</script>
+</p>
+<p>where <script type="math/tex">Pw = A/R</script>, where <script type="math/tex">R</script> is the hydraulic radius. A good approximation for shear stress in unsteady flow is <script type="math/tex">\tau = \rho g R S_f</script>. The value <script type="math/tex">S_f</script> is the slope of the energy grade line at some instant and is also called the friction slope. This slope can be empirically determined by a variety of models, typically Chezy's or Manning's equation is used. In either of these two models, we are using the STEADY FLOW equation of motion to mimic unsteady behavior - nothing wrong, and it is common practice, but this decision does limit the frequency response of the model (the ability to change fast - hence the shallow wave theory assumption!).</p>
+<p>The resulting friction model is</p>
+<p>
+<script type="math/tex; mode=display">F_{f} = \rho g A S_f \delta x</script>
+<strong>Pressure Force</strong>: The pressure forces are comprized of the pressure applied at the end faces of the reach, and along the channel sides.  Figure 3 is a sketch that depicts a panel of a cross section that is integrated vertically to obtain pressure magnitude. </p>
+<p><img alt="" src="../pressure_sketch.png" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Figure 3 Pressure-Integral Sketch</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>
+<script type="math/tex; mode=display"> F_p = \int_A dF</script>
+</p>
+<p>where </p>
+<p>
+<script type="math/tex; mode=display"> dF = (z-h)\rho g \xi (h) dh</script>
+</p>
+<p>where <script type="math/tex">\xi (h)</script> is the width panel at a given distance above the channel bottom
+<script type="math/tex">(h)</script> at any section.</p>
+<p>The net forceis the differnece in the upstream and downstream forces:
+<script type="math/tex; mode=display"> F_{p~net} = F_{p~up} - F_{p~down} = F_p - (F_p + \frac{\partial F_p}{\partial x}\cdot \delta x) = - \frac{\partial F_p}{\partial x}\cdot \delta x </script>
+</p>
+<p>when expressedusing the integral:
+<script type="math/tex; mode=display"> - \frac{\partial F_p}{\partial x}\cdot \delta x  = - \frac{\partial}{\partial x}[\int_0^Z \rho g (z-h) \xi(h) dh]\delta x</script>
+</p>
+<p>evaluating by parts
+<script type="math/tex; mode=display"> F_{p~net} = - \rho g [\frac{\partial z}{\partial x}\int_0^Z \xi(h) dh + \int_0^Z (z-h) \xi(h) \frac{\partial \xi(h)}{\partial x} dh]\delta x </script>
+</p>
+<p>The first term integrates to the cross sectional area, the second term is the variation
+in pressure with position along the channel. The other pressure force to consider is the bank force (the pressure force exerted by the banks on the element). This force is computed using the same type of integral structure except the integrand order is swapped.</p>
+<p>
+<script type="math/tex; mode=display"> F_{p~bank} = [\int_0^Z (z-h) \xi(h) \frac{\partial \xi(h)}{\partial x} \delta x]dh </script>
+</p>
+<p>Now to combine the parts into a momentum balance:</p>
+<p>
+<script type="math/tex; mode=display"> Momentum_{in} - Momentum_{out} + \sum F = \frac{d(mV)}{dt} </script>
+</p>
+<p>Substitution of the pieces :</p>
+<p>
+<script type="math/tex; mode=display"> Momentum_{in} - Momentum_{out} + F_{p~net} + F_{bank} + F_{gravity} - F_{friction} = \frac{d(mV)}{dt} </script>
+</p>
+<p>Now write the expressions for each expressions for each part:</p>
+<p>
+<script type="math/tex; mode=display"> \rho \cdot V^2A - \rho \cdot V^2A - \frac{\partial}{\partial x}(\rho \cdot V^2A)\delta x \\ - \rho g [\frac{\partial z}{\partial x}\int_0^Z \xi(h) dh - \int_0^Z (z-h) \xi(h) \frac{\partial \xi(h)}{\partial x} dh]\delta x \\ + [\int_0^Z (z-h) \xi(h) \frac{\partial \xi(h)}{\partial x} \delta x]dh \\ + \rho g AS_0 \delta x \\ - \rho g A S_f \delta x \\ = \rho \cdot \delta x \cdot \frac{\partial}{\partial t} (AV) </script>
+</p>
+<p>The rows above, in order represent:
+1. Net momentum entering the reach.
+2. Pressure force differential at the end sections.
+3. Pressure force on the channel sides.
+4. Gravitational force.
+5. Frictional force opposing flow.
+6. Total acceleration in the reach (as change in linear momentum). </p>
+<h3 id="simplifications">Simplifications</h3>
+<p>Canceling terms and dividing by <script type="math/tex">\rho \delta x</script> (isothermal, incompressible flow; reach has finite
+length), The momentum equation simplifies to:</p>
+<p>
+<script type="math/tex; mode=display">-\frac{\partial }{\partial x}(V^2 A) - g \frac{\partial z}{\partial x}\int_0^Z \xi(h) dh + g A S_0 - g R S_f = \frac{\partial }{\partial t}(AV)</script>
+</p>
+<p>The second term integral is the sectional flow area, so it simplifies to</p>
+<p>
+<script type="math/tex; mode=display">-\frac{\partial }{\partial x}(V^2 A) - g \frac{\partial z}{\partial x}A + g A S_0 - g A S_f = \frac{\partial }{\partial t}(AV)</script>
+</p>
+<p>The term with the square of mean section velocity is expanded by the chain rule (<a href="https://www.youtube.com/watch?v=H-ybCx8gt-8">https://www.youtube.com/watch?v=H-ybCx8gt-8</a>), and using <strong>continunity</strong> becomes (notice the convective acceleration term from the change in area with time)</p>
+<p>
+<script type="math/tex; mode=display">-\frac{\partial }{\partial t}(AV) = A \frac{\partial V}{\partial t}  + V \frac{\partial A}{\partial t} = A \frac{\partial V}{\partial t} - VA \frac{\partial V }{\partial x} - V^2 \frac{\partial A}{\partial x}</script>
+</p>
+<p>Now expand and construct</p>
+<p>
+<script type="math/tex; mode=display">-V^2 \frac{\partial A}{\partial x} -2VA \frac{\partial V}{\partial x} - g A \frac{\partial z}{\partial x} + g A (S_0 - S_f) = A \frac{\partial V}{\partial t} - VA \frac{\partial V}{\partial x} - V^2 \frac{\partial A}{\partial x}</script>
+</p>
+<p>Cancel common terms and simplify</p>
+<p>
+<script type="math/tex; mode=display"> -VA \frac{\partial V}{\partial x} - g A \frac{\partial z}{\partial x} + g A (S_0 - S_f) = A \frac{\partial V}{\partial t}</script>
+</p>
+<p>The above equation is the form of the momentum equation for practical use. It will be
+rearranged in the remainder of this essay to fit some other purposes, but this is the
+expression of momentum in the channel reach.</p>
+<p>A bit more manipulation (divide by <script type="math/tex">gA</script>)</p>
+<p>
+<script type="math/tex; mode=display"> -\frac{V}{g}\frac{\partial V}{\partial x} - \frac{\partial z}{\partial x} + (S_0 - S_f) = \frac{1}{g} \frac{\partial V}{\partial t}</script>
+</p>
+<p>Now rearrange to place the two slopes on the left side, and the remaining part of
+momentum to the right side. The result let's us examine the several flow regimes
+common in open channel flows.</p>
+<p>
+<script type="math/tex; mode=display"> S_0 - S_f = \frac{1}{g} \frac{\partial V}{\partial t} + \frac{\partial z}{\partial x} + \frac{V}{g}\frac{\partial V}{\partial x} </script>
+</p>
+<p>If the local acceleration (first term on the right) is zero, the depth taper (middle term on the right) is zero, and the convective acceleration (last term on the right) is zero, then the expression degenerates to the algebraic equation of normal flow (<script type="math/tex">S_0 = S_f</script>). If just the local acceleration term is zero, and all the remaining terms are considered, then the expression degenerates to the ordinary differential equation of gradually varied flow. Finally, if all the terms are retained, then the dynamic flow (shallow wave) conditions are in effect and the resulting model is a partial differential equation.</p>
+<h3 id="flow-regimes">Flow Regimes</h3>
+<p>Re-iterating these typical 
+ow regimes.
+1. Uniform flow; algebraic equation.
+<script type="math/tex; mode=display"> S_f = S_0 </script>
+</p>
+<ol>
+<li>
+<p>Gradually varied; ordinary differential equation.
+<script type="math/tex; mode=display"> S_f = S_0 - \frac{\partial z}{\partial x} - \frac{V}{g}\frac{\partial V}{\partial x} </script>
+</p>
+</li>
+<li>
+<p>Dynamic flow (shallow wave) conditions; partial differential equation.</p>
+</li>
+</ol>
+<p>
+<script type="math/tex; mode=display"> S_f = S_0 - \frac{1}{g} \frac{\partial V}{\partial t} - \frac{\partial z}{\partial x} - \frac{V}{g}\frac{\partial V}{\partial x} </script>
+</p>
+<p>The coupled pair of equations, for continuity and for momentum are called the St. Venant equations and comprise a coupled hyperbolic differential equation system.</p>
+<p>A. Continunity <script type="math/tex; mode=display">(\frac{\partial z}{\partial t} ) \cdot B(z) + \frac{\partial Q}{\partial x}  = q</script>
+</p>
+<p>B. Momentum <script type="math/tex; mode=display"> S_0 - S_f = \frac{1}{g} \frac{\partial V}{\partial t} + \frac{\partial z}{\partial x} + \frac{V}{g}\frac{\partial V}{\partial x} </script>
+</p>
+<p>Solutions (<script type="math/tex">(z, t)</script> and <script type="math/tex">(V, t)</script> functions) are found by a variety of methods including
+finite difference, finite element, finite volume, and characteristics methods.
+In the next lesson we will examine solutions to the gradually varied flow equation, then
+proceed to a finite difference solution to the full dynamic equations in the following
+chapter.</p>
+<h2 id="references">References</h2>
+<p>Koutitas, C. G. 1983. Elements of Computational Hydraulics. ISBN 0-412-00361-9. Pentech Press Ltd. London. (Chapter 4) <a href="https://atomickitty.ddns.net/antares/3-Readings/PracticalComputationalHydraulics-Kousitas/ElementsOfComputationalHydraulics.pdf"></a></p>
+<p>Roberson, J. A., Cassidy, J.J., and Chaudry, M. H., (1988) Hydraulic Engineering, Houghton Mifflin Co (Chapter 10) <a href="https://atomickitty.ddns.net/antares/3-Readings/HydraulicEngineering/Chapter%2010/CHapter%2010.pdf"></a></p>
+<p>Sturm T.W (2001) Open Channel Hydraulics, 1ed., McGraw-Hill, New York. Note: This PDF is from an international edition published in Singapore. <a href="https://atomickitty.ddns.net/antares/3-Readings/OpenChannelHYdraulics/open-channel-hydraulics-sturm.pdf"></a></p>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

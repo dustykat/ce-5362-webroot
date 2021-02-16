@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Syllabus - Surface Water Modeling</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Surface Water Modeling</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">Syllabus</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ce5362-swmodeling-lesson-1/">Lesson 1 Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 2 Modeling Philosophy</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../lesson2/ce5362-swmodeling-lesson-2.1/">Part 1 Modeling</a>
+</li>
+            
+<li >
+    <a href="../lesson2/ce5362-swmodeling-lesson-2.2/">Part 2 St. Venant Equations</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../lesson5/ce5362-swmodeling-lesson-5/">Lesson 5 GVF Variable Step-Backwater</a>
+</li>
+                                    
+<li >
+    <a href="../lesson6/ce5362-swmodeling-lesson-6/">Lesson 6 GVF Fixed Step-Backwater</a>
+</li>
+                                    
+<li >
+    <a href="../lesson7/ce5362-swmodeling-lesson-7/">Lesson 7 Unsteady Lax-Scheme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../untitled/">Readings</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homework <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 1 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 2 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 3 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 4 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 5 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 6 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 7 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 8 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 9 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 10 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 11 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 12 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 13 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 14 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Exams <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Exam 1 Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Exam 1 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Exam 2 Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Exam 2 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 3</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../untitled/">Exam 3 Deploy</a>
+</li>
+            
+<li >
+    <a href="../untitled/">Exam 3 Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../ce5362-swmodeling-lesson-1/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#ce-5362-surface-water-modeling">CE 5362 Surface Water Modeling</a></li>
+            <li><a href="#catalog-description">Catalog Description:</a></li>
+            <li><a href="#course-overview">Course Overview</a></li>
+            <li><a href="#prerequisites">Prerequisites:</a></li>
+            <li><a href="#covid-19-important-guidelines">COVID-19 Important Guidelines:</a></li>
+            <li><a href="#course-sections">Course Sections</a></li>
+            <li><a href="#course-instructor">Course Instructor:</a></li>
+            <li><a href="#teaching-assistants">Teaching assistants:</a></li>
+            <li><a href="#textbook">Textbook:</a></li>
+            <li><a href="#course-contents">Course Contents:</a></li>
+            <li><a href="#learning-outcomes">Learning Outcomes:</a></li>
+            <li><a href="#abet-student-outcomes">ABET Student Outcomes</a></li>
+            <li><a href="#-">---</a></li>
+            <li><a href="#course-schedule">Course Schedule</a></li>
+            <li><a href="#assessment-instruments-and-grading-criteria">Assessment Instruments and Grading Criteria:</a></li>
+            <li><a href="#resourcestools">Resources/Tools</a></li>
+            <li><a href="#classroom-policy">Classroom Policy:</a></li>
+            <li><a href="#ada-statement">ADA Statement:</a></li>
+            <li><a href="#academic-integrity-statement">Academic Integrity Statement:</a></li>
+            <li><a href="#religious-holy-day-statement">Religious Holy Day Statement:</a></li>
+            <li><a href="#ethical-conduct-policy">Ethical Conduct Policy:</a></li>
+            <li><a href="#-_1">---</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="ce-5362-surface-water-modeling">CE 5362 Surface Water Modeling</h1>
+<p>Spring 2021</p>
+<h2 id="catalog-description">Catalog Description:</h2>
+<p>Theory and application of hydrodynamic and mass transport models.  Representative application of models for watershed and/or estuary modeling of flow and constituent transport.</p>
+<p>3 credit hours comprising of lecture and hands-on workshop/exercise sessions.</p>
+<h2 id="course-overview">Course Overview</h2>
+<p>The course trains engineers to practice hydrologic and hydraulic modeling in one-dimensional <strong>unsteady</strong> conditions; and in higher spatial dimensions (2D/3D) using custom-written and professional software tools. Integration of simulation tools to examine complex systems is emphasized.</p>
+<h2 id="prerequisites">Prerequisites:</h2>
+<h2 id="covid-19-important-guidelines">COVID-19 Important Guidelines:</h2>
+<ul>
+<li>
+<p>If Texas Tech University campus operations are required to change because of health concerns related to the COVID-19 pandemic, it is possible that this course will move to a fully online delivery format.  Should that be necessary, students will be advised of technical and/or equipment requirements, including remote proctoring software.  </p>
+</li>
+<li>
+<p>Policy on absences resulting from illness: We anticipate that some students may have extended absences.  To avoid students feeling compelled to attend in-person class periods when having symptoms or feeling unwell, a standard policy is provided that holds students harmless for illness-related absences (see Section A below).</p>
+</li>
+</ul>
+<h3 id="a-illness-based-absence-policy-face-to-face-classes">A. Illness-Based Absence Policy (Face-to-Face Classes)</h3>
+<p>If at any time during the semester you are ill, in the interest of your own health and safety as well as the health and safety of your instructors and classmates, you are encouraged not to attend face-to-face class meetings or events.  Please review the steps outlined below that you should follow to ensure your absence for illness will be excused.  These steps also apply to not participating in synchronous online class meetings if you feel too ill to do so and missing specified assignment due dates in asynchronous online classes because of illness.</p>
+<ol>
+<li>
+<p>If you are ill and think the symptoms might be COVID-19-related:</p>
+<ol>
+<li>Call Student Health Services at 806.743.2848 or your health care provider.  During after-hours and on weekends, contact TTU COVID-19 Helpline at TBD.</li>
+<li>Self-report as soon as possible using the Dean of Students COVID-19 webpage. This website has specific directions about how to upload documentation from a medical provider and what will happen if your illness renders you unable to participate in classes for more than one week.</li>
+<li>If your illness is determined to be COVID-19-related, all remaining documentation and communication will be handled through the Office of the Dean of Students, including notification of your instructors of the time you may be absent from and may return to classes.</li>
+<li>If your illness is determined not to be COVID-19-related, please follow steps 2.a-d below.</li>
+</ol>
+</li>
+<li>
+<p>If you are ill and can attribute your symptoms to something other than COVID-19:</p>
+<ol>
+<li>If your illness renders you unable to attend face-to-face classes, participate in synchronous online classes, or miss specified assignment due dates in asynchronous online classes, you are encouraged to contact either Student Health Services at 806.743.2848 or your health care provider.  Note that Student Health Services and your own and other health care providers may arrange virtual visits.</li>
+<li>During the health provider visit, request a “return to school” note.</li>
+<li>E-mail the instructor a picture of that note.</li>
+<li>Return to class by the next class period after the date indicated on your note.</li>
+</ol>
+</li>
+</ol>
+<p>Following the steps outlined above helps to keep your instructors informed about your absences and ensures your absence or missing an assignment due date because of illness will be marked excused.  You will still be responsible to complete within a week of returning to class any assignments, quizzes, or exams you miss because of illness.</p>
+<h3 id="b-illness-based-absence-policy-telepresence-classes">B. Illness-Based Absence Policy (Telepresence Classes)</h3>
+<p>Same as above with respect potential to infect others; go to a health care provider if you are ill.  Telepresence courses are recorded and will be available on TTU MediaSite and/or YouTube (unlisted).  Exercises, Quizzes, and Examinations are all administered by a Learning Management System (Blackboard) and users need to allow enough time to complete and upload their work&gt;</p>
+<h2 id="course-sections">Course Sections</h2>
+<p>Lesson time, days, and location: </p>
+<ol>
+<li>Section D01; CRN ?????; 0800PM-0920PM M, W ; Telepresence (Zoom)</li>
+<li>Section 010; CRN ?????; 0800PM-0920PM M, W ; Telepresence (Zoom)</li>
+</ol>
+<p>Please note the times are selected so that international students can attend at a reasonable time of day.</p>
+<p>0800PM LBB == 0800AM BST (next day) thus</p>
+<p>0800PM M LBB == 0800PM T BST
+0800PM W LBB == 0800PM TH BST</p>
+<h2 id="course-instructor">Course Instructor:</h2>
+<p>Instructor: Theodore G. Cleveland, Ph.D., P.E., M. ASCE, F. EWRI</p>
+<p>Email: theodore.cleveland@ttu.edu  (put ENGR 5362 in subject line for email related to this class)</p>
+<p>Office location: Telepresence (Zoom; GoToMeeting; etc.)</p>
+<p>Office hours: TBD</p>
+<h2 id="teaching-assistants">Teaching assistants:</h2>
+<p>Email : none</p>
+<p>Office location: none</p>
+<p>Office hours: none</p>
+<h2 id="textbook">Textbook:</h2>
+<p>none</p>
+<h2 id="course-contents">Course Contents:</h2>
+<ul>
+<li>Modeling Philosophy</li>
+<li>Hydraulics:<ul>
+<li>1-D Dynamic Wave Routing:<ol>
+<li>Lax-Diffusion (Homebrew using JupyterLab/iPython)</li>
+<li>SWMM </li>
+<li>1-D Branched Systems:<ol>
+<li>Simulate the confluence of two streams in steady conditions using SWMM</li>
+<li>Simulate the confluence of two streams in unsteady conditions using SWMM</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>2-D Floodplain Approximation<ol>
+<li>Interconnected Channel and Pond Routing (ICPR): <ol>
+<li>Conceptualization</li>
+<li>Storage elements</li>
+<li>Routing elements, </li>
+<li>Approximations using SWMM.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Hydrology:<ul>
+<li>Subcatchment Representation: <ol>
+<li>Shape and Scale,</li>
+<li>Runoff Generation</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Integrated H&amp;H Models:<ul>
+<li>Subdivision scale (ICPR concept);</li>
+<li>County scale (Branched 1D) ;</li>
+</ul>
+</li>
+<li>Constituient Transport (Water Quality);<ol>
+<li>Tracers, </li>
+<li>Reactive Transport, </li>
+<li>Green Infrastructure (GI) for WQ Enhancement<ol>
+<li>Infiltration approaches</li>
+<li>Storage-Delay approaches</li>
+<li>Filtration approaches</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Advanced Topics (Time Permitting):<ol>
+<li>EFCD for 2D Hydrodynamics</li>
+<li>SToRM for 2D Hydrodynamics</li>
+<li>Lattice-Boltzman Approach for 2D/3D hydrodynamics</li>
+</ol>
+</li>
+</ul>
+<h2 id="learning-outcomes">Learning Outcomes:</h2>
+<p>On completion of the course, students will be able to:
+1. Articulate relevant theory for 1D dynamic wave routing.
+2. Develop a Lax-Diffusion model for time-varying flow in an open channel and compare results with professional tools (SWMM).
+3. Simulate the confluence of two streams in steady and unsteady conditions using professional tools (SWMM).
+4. Articulate ICPR concept for approximating 2D estuary/floodplains
+5. Employ the ICPR concept for approximating 2D estuary/floodplains
+6. Approximate constituient transport in surface water systems
+7. Articulate green infrastructure approaches to water quality enhancement
+8. Articulate awareness of alternative modeling approaches (Lattice-Boltzman Fluid Dynamics ...)</p>
+<h2 id="abet-student-outcomes">ABET Student Outcomes</h2>
+<ul>
+<li>Engineering:<ol>
+<li>An ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics.</li>
+<li>An ability to acquire and apply new knowledge as needed, using appropriate learning strategies. </li>
+</ol>
+</li>
+</ul>
+<p>The script block below is for table formatting no need to understand it.</p>
+<pre><code class="python">%%html
+&lt;style&gt;
+  table {margin-left: 0 !important;}
+&lt;/style&gt;
+</code></pre>
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<h2 id="-">---</h2>
+<h2 id="course-schedule">Course Schedule</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Item</th>
+<th align="left">Lesson</th>
+<th align="left">Workshop/Exercises</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"></td>
+<td align="left"><strong>Tools</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25 Jan 2021</td>
+<td align="left">1 Introduction: <br> - Syllabus <br> - Content Servers <br> - LMS Server <br> - Software</td>
+<td align="left">Computing Environment set up: <br> - Installing Anaconda (Win/MacOS/AWS) <br> – Jupyter notebooks <br> - Simple Examples</td>
+</tr>
+<tr>
+<td align="left">27Jan2021</td>
+<td align="left">2 Modeling Philosophy: <br> - Why model <br> - Parsimony <br></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">28 Jan 2021</td>
+<td align="left">Mass Conservation: <br> - Computational Cell <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><strong>1D Open Channel Hydraulics</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">1 Feb 2021</td>
+<td align="left">4 Mass Conservation: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">3 Feb 2021</td>
+<td align="left">5 Momentum Conservation: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">8 Feb 2021</td>
+<td align="left">6 Steady Flow Algorithms: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">10 Feb 2021</td>
+<td align="left">7 Steady Flow Codes : <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">15 Feb 2021</td>
+<td align="left">8 Steady Flow in SWMM: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">17 Feb 2021</td>
+<td align="left">9 Confluence (Wurbs and James): <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">22 Feb 2021</td>
+<td align="left">10 Unsteady Flow Algorithms: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">24 Feb 2021</td>
+<td align="left">11 Unsteady Flow Code (homebrew): <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">1 Mar 2021</td>
+<td align="left">12 Unsteady Flow Code (homebrew): <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">3 Mar 2021</td>
+<td align="left">13 Unsteady Flow in SWMM: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">8 Mar 2021</td>
+<td align="left">14 Confluence : (Wang et. al.): <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">10 Mar 2021</td>
+<td align="left">16 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">15 Mar 2021</td>
+<td align="left">17 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">17 Mar 2021</td>
+<td align="left">18 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">22 Mar 2021</td>
+<td align="left">19 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">24 Mar 2021</td>
+<td align="left">20 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">29 Mar 2021</td>
+<td align="left">21 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><strong> placeholder </strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">31 Mar 2021</td>
+<td align="left">22 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">5 Apr 2021</td>
+<td align="left">23 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">7 Apr 2021</td>
+<td align="left">24 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">12 Apr 2021</td>
+<td align="left">25 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><strong> placeholder </strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">14 Apr 2021</td>
+<td align="left">26 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">19 Apr 2021</td>
+<td align="left">27 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">21 Apr 2021</td>
+<td align="left">28 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">26 Apr 2021</td>
+<td align="left">29 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">28 Apr 2021</td>
+<td align="left">30 topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">3 May 2021</td>
+<td align="left">31topic ...: <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+<td align="left">laboratory <br> - subtopic1 <br> - subtopic2 <br> - subtopic3</td>
+</tr>
+<tr>
+<td align="left">10 May 2021</td>
+<td align="left"><strong>Final Project Report and Link to Video</strong></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="assessment-instruments-and-grading-criteria">Assessment Instruments and Grading Criteria:</h2>
+<p>There will be an exam and several quizzes and homeworks/project for the course.  </p>
+<p>Grades will be based on the following components; weighting is approximate:</p>
+<table>
+<thead>
+<tr>
+<th>Assessment Instrument</th>
+<th align="right">Total points</th>
+<th align="right">Weight(%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exams/Quizzes</td>
+<td align="right">25</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Literature Review</td>
+<td align="right">25</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Homeworks/Project</td>
+<td align="right">50</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>Overall total</td>
+<td align="right">100</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<p>Letter grades will be assigned using the following proportions:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Normalized Score Range</th>
+<th align="right">Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">≥ 85</td>
+<td align="right">A</td>
+</tr>
+<tr>
+<td align="left">75-84</td>
+<td align="right">B</td>
+</tr>
+<tr>
+<td align="left">65-74</td>
+<td align="right">C</td>
+</tr>
+<tr>
+<td align="left">55-64</td>
+<td align="right">D</td>
+</tr>
+<tr>
+<td align="left">&lt; 55</td>
+<td align="right">F</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resourcestools">Resources/Tools</h2>
+<h3 id="amazon-web-services">Amazon Web Services</h3>
+<ol>
+<li>Lightsail (Virtual Private Server) Instances: Low cost (~24 USD/month or less) compute servers for running models on a remote AWS maintained machine. This is what the instructor will use for <strong>Jupyter notebooks, and the various professional tools.</strong></li>
+</ol>
+<h3 id="additional-platforms-for-python">Additional Platforms for Python</h3>
+<ol>
+<li>
+<p>Anaconda platform (https://www.anaconda.com/): Anaconda distribution is an open-source Data Science Distribution Development Platform.  It includes Python 3 with over 1,500 data science packages making it easy to manage libraries and dependencies.  Available in Linux (x86-64 only), Windows, and Mac OS X.  </p>
+</li>
+<li>
+<p>Jupyter (https://jupyter.org/): JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. JupyterLab is flexible: Configure and arrange the user interface to support a wide range of workflows in data science, scientific computing, and machine learning. <code>note</code> Anaconda for MacOS includes a JupyterLab instance, so a separate install is not required.</p>
+</li>
+</ol>
+<h4 id="additional-modules">Additional Modules</h4>
+<ol>
+<li>Math module (https://docs.python.org/3/library/math.html): Gives access to the mathematical functions defined by the C standard e.g. factorial, gcd, exponential, logarithm. </li>
+<li>Operator module (https://docs.python.org/3/library/operator.html): Helps in exporting a set of efficient functions corresponding to the intrinsic operators of Python.  For example, the operator add(x,y) is equivalent to the expression x+y.</li>
+<li>Scipy module (https://www.scipy.org/): A Python-based ecosystem of open-source software for mathematics, science, and engineering. Some of the core packages are:<ul>
+<li>Numpy: Provides n-dimensional array package</li>
+<li>Scipy: Fundamental for scientific computing (e.g. linear algorithm, optimization)</li>
+<li>Matplotlib: Visualizations/2D plotting</li>
+<li>IPython: Enhanced interactive console &lt;&lt;= this is the kernel used in JupyterLab</li>
+<li>Pandas: Data structures and data analysis</li>
+</ul>
+</li>
+<li>Scikit-learn module (https://scikit-learn.org/stable/): A library for machine learning in Python. It is a simple and efficient tool for predictive data analysis.  It is built on NumPy, SciPy, and matplotlib modules.</li>
+</ol>
+<p>JupyterLab hardware requirements are minimal, in fact this syllabus was initially created using a JupyterLab notebook (as a markdown processor) on a RaspberryPi.</p>
+<hr />
+<h2 id="classroom-policy">Classroom Policy:</h2>
+<p>The following activities are not allowed in the classroom: Texting or talking on the cellphone or other electronic devices, and reading non-course related materials.</p>
+<h3 id="telepresence-on-line-courses">Telepresence (On-line) Courses</h3>
+<p>Obviously electronic devices are vital; disrupting the webinar is prohibited, please mute your microphone unless you have a question - consider typing your question into the chat window as well. </p>
+<h2 id="ada-statement">ADA Statement:</h2>
+<p>Any student who, because of a disability, may require special arrangements in order to meet the course requirements should contact the instructor as soon as possible to make necessary arrangements.  Students must present appropriate verification from Student Disability Services during the instructor's office hours.  Please note that instructors are not allowed to provide classroom accommodation to a student until appropriate verification from Student Disability Services has been provided.  For additional information, please contact Student Disability Services 
+office in 335 West Hall or call 806.742.2405.</p>
+<h2 id="academic-integrity-statement">Academic Integrity Statement:</h2>
+<p>Academic integrity is taking responsibility for one’s own class and/or course work, being individually accountable, and demonstrating intellectual honesty and ethical behavior.  Academic integrity is a personal choice to abide by the standards of intellectual honesty and responsibility.  Because education is a shared effort to achieve learning through the exchange of ideas, students, faculty, and staff have the collective responsibility to build mutual trust and respect.  Ethical behavior and independent thought are essential for the highest level of academic achievement, which then must be measured.  Academic achievement includes scholarship, teaching, and learning, all of which are shared endeavors.  Grades are a device used to quantify the successful accumulation of knowledge through learning.  Adhering to the standards of academic integrity ensures grades are earned honestly.  Academic integrity is the foundation upon which students, faculty, and staff build their educational and professional careers.  [Texas Tech University (“University”) Quality Enhancement Plan, Academic Integrity Task Force, 2010].</p>
+<h2 id="religious-holy-day-statement">Religious Holy Day Statement:</h2>
+<p>“Religious holy day” means a holy day observed by a religion whose places of worship are exempt from property taxation under Texas Tax Code §11.20.  A student who intends to observe a religious holy day should make that intention known to the instructor prior to the absence.  A student who is absent from classes for the observance of a religious holy day shall be allowed to take an examination or complete an assignment scheduled for that day within a reasonable time after the absence.  A student who is excused may not be penalized for the absence; however, the instructor may respond appropriately if the student fails to complete the assignment satisfactorily.</p>
+<h2 id="ethical-conduct-policy">Ethical Conduct Policy:</h2>
+<p>Cheating is prohibited, and the representation of the work of another person as your own will be grounds for receiving a failing grade in the course.</p>
+<h2 id="-_1">---</h2>
+<p>The script block below identifies server last used to render notebook</p>
+<pre><code class="python"># Script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+# Script block to left align Markdown Tables
+</code></pre>
+
+<pre><code>atomickitty.aws
+antares
+/opt/jupyterhub/bin/python3
+3.6.9 (default, Oct  8 2020, 12:12:24) 
+[GCC 8.4.0]
+sys.version_info(major=3, minor=6, micro=9, releaselevel='final', serial=0)
+</code></pre>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../mathjaxhelper.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
