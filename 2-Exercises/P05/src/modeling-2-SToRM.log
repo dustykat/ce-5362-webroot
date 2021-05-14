@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 APR 2020 18:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 APR 2021 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -26,26 +26,30 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 ) (./daves.sty
 Dave's standard definitions Friday, July 7, 1995...
 Dave's standards updated Friday 23 May 2008...
-This style file now requires ame: 
-./modeling-2-SToRM.tex:3: Emergency stop.
-<read *> 
-         
-l.3 \usepackage
-               {amsmath,amssymb,longtable,caption,graphicx,pdfpages,lscape}^^M
-End of file on the terminal!
-
- 
-Here is how much of TeX's memory you used:
- 201 strings out of 493014
- 2201 string characters out of 6133351
- 53601 words of memory out of 5000000
- 3834 multiletter control sequences out of 15000+600000
- 3940 words of font info for 15 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 21i,0n,19p,160b,36s stack positions out of 5000i,500n,10000p,200000b,80000s
-./modeling-2-SToRM.tex:3:  ==> Fatal error occurred, no output PDF file produce
-d!
-@orh=\skip49
+This style file now requires use of fancyheadings for header/footer control...
+\chaptopsep=\skip43
+\chapaftersep=\skip44
+\c@theorem=\count87
+Alter some LaTeX defaults for better treatment of figures...
+.....dbt changed footnote indentation
+.....dbt changed labels to arabic
+.....dbt included milestone charts
+\mile@i=\count88
+\mile@j=\count89
+\mile@startmonth=\count90
+\mile@endmonth=\count91
+\mile@major=\count92
+\mile@month=\dimen103
+\mile@width=\dimen104
+\mile@shift=\dimen105
+\mile@trheight=\dimen106
+\mile@trdepth=\dimen107
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip45
+\f@ncyO@elh=\skip46
+\f@ncyO@erh=\skip47
+\f@ncyO@olh=\skip48
+\f@ncyO@orh=\skip49
 \f@ncyO@elf=\skip50
 \f@ncyO@erf=\skip51
 \f@ncyO@olf=\skip52
@@ -525,23 +529,185 @@ Type  H <return>  for immediate help.
 l.76 ...egraphics[width=5in]{WhiteRiverAerial.jpg}
                                                   
 ? 
-./modeling-2-SToRM.tex:76: Emergency stop.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Package natbib Warning: Citation `GoogleEarth2011' on page 2 undefined on input
+ line 77.
+
+
+Package natbib Warning: Citation `GoogleEarth2011' on page 2 undefined on input
+ line 77.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2] [3 <./researchflume.jpg>] [4]
+
+Package natbib Warning: Citation `surfer2010' on page 5 undefined on input line
+ 84.
+
+
+Package natbib Warning: Citation `dixon2011' on page 5 undefined on input line 
+87.
+
+
+LaTeX Warning: Reference `fig:flume-elevation-image' on page 5 undefined on inp
+ut line 89.
+
+
+LaTeX Warning: File `flume-elevation-image.jpg' not found on input line 93.
+
+
+./modeling-2-SToRM.tex:93: Package pdftex.def Error: File `flume-elevation-imag
+e.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.76 ...egraphics[width=5in]{WhiteRiverAerial.jpg}
+l.93 ...hics[width=5in]{flume-elevation-image.jpg}
                                                   
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+? 
 
- 
+Package natbib Warning: Citation `surfer2010' on page 5 undefined on input line
+ 101.
+
+
+LaTeX Warning: Reference `fig:WhiteRiverAerial' on page 5 undefined on input li
+ne 101.
+
+
+LaTeX Warning: Reference `fig:white-river-elevation-image' on page 5 undefined 
+on input line 101.
+
+[5
+
+]
+
+LaTeX Warning: File `white-river-elevation-image.jpg' not found on input line 1
+07.
+
+
+./modeling-2-SToRM.tex:107: Package pdftex.def Error: File `white-river-elevati
+on-image.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 ...dth=6in]{white-river-elevation-image.jpg}
+                                                  
+? 
+[6] [7]
+
+LaTeX Warning: Reference `fig:flume-simulation-image' on page 8 undefined on in
+put line 124.
+
+
+LaTeX Warning: Reference `tab:flume-results' on page 8 undefined on input line 
+124.
+
+
+LaTeX Warning: Reference `fig:flume-simulation-image' on page 8 undefined on in
+put line 130.
+
+
+LaTeX Warning: Reference `fig:flume-simulation-image' on page 8 undefined on in
+put line 130.
+
+
+LaTeX Warning: File `flume-simulation-image.jpg' not found on input line 149.
+
+
+./modeling-2-SToRM.tex:149: Package pdftex.def Error: File `flume-simulation-im
+age.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 ...cs[width=6in]{flume-simulation-image.jpg}
+                                                  
+? 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8]
+
+LaTeX Warning: Reference `fig:flume-simulation-image' on page 9 undefined on in
+put line 158.
+
+[9]
+
+LaTeX Warning: File `white-river-simulation-image.jpg' not found on input line 
+168.
+
+
+./modeling-2-SToRM.tex:168: Package pdftex.def Error: File `white-river-simulat
+ion-image.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 ...th=7in]{white-river-simulation-image.jpg}
+                                                  
+? 
+
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 168--169
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `tab:white-river-results' on page 10 undefined on inpu
+t line 173.
+
+[10] [11] [12]
+Missing character: There is no Õ in font cmr10!
+
+
+Package natbib Warning: There were undefined citations.
+
+[13] (./modeling-2-SToRM.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8692 strings out of 493014
- 130360 string characters out of 6133351
- 233403 words of memory out of 5000000
- 12025 multiletter control sequences out of 15000+600000
- 12662 words of font info for 69 fonts, out of 8000000 for 9000
+ 8769 strings out of 493014
+ 131270 string characters out of 6133351
+ 236403 words of memory out of 5000000
+ 12054 multiletter control sequences out of 15000+600000
+ 14362 words of font info for 91 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 38i,6n,43p,1050b,283s stack positions out of 5000i,500n,10000p,200000b,80000s
-./modeling-2-SToRM.tex:76:  ==> Fatal error occurred, no output PDF file produc
-ed!
+ 38i,13n,47p,1114b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on modeling-2-SToRM.pdf (13 pages, 939851 bytes).
+PDF statistics:
+ 96 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 11270 words of extra memory for PDF output out of 12000 (max. 10000000)
+
